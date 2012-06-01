@@ -1,5 +1,4 @@
 platform :ios
-
-target :test, :exclusive => true do
+target :test do
     dependency 'Kiwi'
 end
