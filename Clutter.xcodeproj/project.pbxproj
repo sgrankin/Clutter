@@ -6,18 +6,61 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* TestMacros.m */; };
+		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
+		97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
+		97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
+		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
+		97BAE25115785AF000449601 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE25015785AF000449601 /* libPods-test.a */; };
+		97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
+		97BAE25415785B5700449601 /* Pods-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE25315785B5700449601 /* Pods-test.xcconfig */; };
+		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		09FC2F1879B748518CC2CD12 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		563CE226A06449DA8A7D1047 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9710F38515784F7B00BA3FDC /* Clutter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Clutter.h; path = Clutter/Clutter.h; sourceTree = "<group>"; };
 		9710F38A1578508C00BA3FDC /* ClutterMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClutterMacros.h; path = Clutter/ClutterMacros.h; sourceTree = "<group>"; };
-		9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */ = {isa = PBXFileReference; name = "UISegmentedControl+ClutterAdditions.h"; path = "Clutter/UISegmentedControl+ClutterAdditions.h"; sourceTree = "<group>"; };
-		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
+		9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+ClutterAdditions.h"; path = "Clutter/UISegmentedControl+ClutterAdditions.h"; sourceTree = "<group>"; };
+		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97A74F9E15792FAE00C093EF /* TestMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMacros.m; sourceTree = "<group>"; };
+		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23715785AAD00449601 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23915785AAD00449601 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterTests-Info.plist"; sourceTree = "<group>"; };
+		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
+		97BAE25015785AF000449601 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
+		97BAE25315785B5700449601 /* Pods-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
+		97BAE25515785CCD00449601 /* TestClutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClutter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97BAE22E15785AAD00449601 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BAE25115785AF000449601 /* libPods-test.a in Frameworks */,
+				97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */,
+				97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */,
+				97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9710F37C15784F6400BA3FDC = {
 			isa = PBXGroup;
 			children = (
 				9710F3891578507900BA3FDC /* Clutter */,
+				97BAE23B15785AAD00449601 /* ClutterTests */,
+				97BAE23415785AAD00449601 /* Frameworks */,
+				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
+				97BAE23315785AAD00449601 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -32,7 +75,70 @@
 			name = Clutter;
 			sourceTree = "<group>";
 		};
+		97BAE23315785AAD00449601 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97BAE23215785AAD00449601 /* ClutterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97BAE23415785AAD00449601 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
+				97BAE23715785AAD00449601 /* UIKit.framework */,
+				97BAE23915785AAD00449601 /* Foundation.framework */,
+				563CE226A06449DA8A7D1047 /* libPods.a */,
+				97BAE25015785AF000449601 /* libPods-test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97BAE23B15785AAD00449601 /* ClutterTests */ = {
+			isa = PBXGroup;
+			children = (
+				97BAE25315785B5700449601 /* Pods-test.xcconfig */,
+				97BAE23C15785AAD00449601 /* Supporting Files */,
+				97BAE25515785CCD00449601 /* TestClutter.m */,
+				97A74F9E15792FAE00C093EF /* TestMacros.m */,
+			);
+			path = ClutterTests;
+			sourceTree = "<group>";
+		};
+		97BAE23C15785AAD00449601 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */,
+				97BAE23E15785AAD00449601 /* InfoPlist.strings */,
+				97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97BAE23115785AAD00449601 /* ClutterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97BAE24715785AAD00449601 /* Build configuration list for PBXNativeTarget "ClutterTests" */;
+			buildPhases = (
+				97BAE22D15785AAD00449601 /* Sources */,
+				97BAE22E15785AAD00449601 /* Frameworks */,
+				97BAE22F15785AAD00449601 /* Resources */,
+				97BAE23015785AAD00449601 /* ShellScript */,
+				CCC2017173E94F0EBF59D264 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClutterTests;
+			productName = ClutterTests;
+			productReference = 97BAE23215785AAD00449601 /* ClutterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9710F37E15784F6400BA3FDC /* Project object */ = {
@@ -49,23 +155,159 @@
 				en,
 			);
 			mainGroup = 9710F37C15784F6400BA3FDC;
+			productRefGroup = 97BAE23315785AAD00449601 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				97BAE23115785AAD00449601 /* ClutterTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		97BAE22F15785AAD00449601 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */,
+				97BAE25415785B5700449601 /* Pods-test.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97BAE23015785AAD00449601 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		CCC2017173E94F0EBF59D264 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97BAE22D15785AAD00449601 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */,
+				97BAE25615785CCD00449601 /* TestClutter.m in Sources */,
+				97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97BAE23E15785AAD00449601 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97BAE23F15785AAD00449601 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		9710F38315784F6400BA3FDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		9710F38415784F6400BA3FDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
+			};
+			name = Release;
+		};
+		97BAE24515785AAD00449601 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BAE25315785B5700449601 /* Pods-test.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClutterTests/ClutterTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ClutterTests/ClutterTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		97BAE24615785AAD00449601 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BAE25315785B5700449601 /* Pods-test.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClutterTests/ClutterTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ClutterTests/ClutterTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -77,6 +319,15 @@
 			buildConfigurations = (
 				9710F38315784F6400BA3FDC /* Debug */,
 				9710F38415784F6400BA3FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97BAE24715785AAD00449601 /* Build configuration list for PBXNativeTarget "ClutterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97BAE24515785AAD00449601 /* Debug */,
+				97BAE24615785AAD00449601 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
