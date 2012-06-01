@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.source_files = 'Clutter'
   # s.resources = "icon.png"
-  s.clean_paths = 'ClutterTests', '*.xcodeproj', 'Podfile*'
+  # s.preserve_paths = 'Clutter'
 
   s.frameworks = 'Foundation', 'UIKit'
   # s.libraries = 'iconv'
