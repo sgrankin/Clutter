@@ -10,13 +10,14 @@ Pod::Spec.new do |s|
 
   s.platform = :ios
   s.source_files = 'Clutter'
-  # s.resource = "icon.png"
-  s.clean_path = 'ClutterTests'
+  # s.resources = "icon.png"
+  s.clean_paths = 'ClutterTests', '*.xcodeproj', 'Podfile*'
 
-  s.framework = 'Foundation', 'UIKit'
-  # s.library = 'iconv'
+  s.frameworks = 'Foundation', 'UIKit'
+  # s.libraries = 'iconv'
   s.requires_arc = true
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   # s.dependency 'JSONKit', '~> 1.4'
 end
+# vi:set ft=ruby:
