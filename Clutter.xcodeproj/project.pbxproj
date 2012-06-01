@@ -6,11 +6,30 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		9710F38515784F7B00BA3FDC /* Clutter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Clutter.h; path = Clutter/Clutter.h; sourceTree = "<group>"; };
+		9710F38A1578508C00BA3FDC /* ClutterMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClutterMacros.h; path = Clutter/ClutterMacros.h; sourceTree = "<group>"; };
+		9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */ = {isa = PBXFileReference; name = "UISegmentedControl+ClutterAdditions.h"; path = "Clutter/UISegmentedControl+ClutterAdditions.h"; sourceTree = "<group>"; };
+		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		9710F37C15784F6400BA3FDC = {
 			isa = PBXGroup;
 			children = (
+				9710F3891578507900BA3FDC /* Clutter */,
 			);
+			sourceTree = "<group>";
+		};
+		9710F3891578507900BA3FDC /* Clutter */ = {
+			isa = PBXGroup;
+			children = (
+				9710F38515784F7B00BA3FDC /* Clutter.h */,
+				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
+				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
+				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
+			);
+			name = Clutter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
