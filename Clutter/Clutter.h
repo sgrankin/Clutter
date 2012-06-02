@@ -25,13 +25,15 @@
 #if defined(__cplusplus)
 extern "C" {
 #endif
-    
+
 #import "ClutterMacros.h"
-    
+
+#ifdef __OBJC__
 #import "UISegmentedControl+ClutterAdditions.h"
+#endif // __OBJC__
 
 #if defined(__cplusplus)
 }
 #endif
 
-#endif
+#endif // Clutter_Clutter_h
