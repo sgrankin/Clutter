@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name     = 'Clutter'
-  s.version  = '0.0.0'
-  # s.license  = 'MIT'
+  s.version  = '0.0.1'
+  s.license  = 'MIT'
   s.summary  = 'Miscelaneous iOS classes and additions.'
   s.homepage = 'http://www.thunderbunny.net/gitweb/Clutter.git'
   s.author   = { 'Sergey Grankin' => 'sagran@gmail.com' }
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.source_files = 'Clutter'
   # s.resources = "icon.png"
-  # s.preserve_paths = 'Clutter'
+  s.preserve_paths = 'Clutter'
 
   s.frameworks = 'Foundation', 'UIKit'
   # s.libraries = 'iconv'
