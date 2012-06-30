@@ -19,22 +19,21 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
 #import "NSString+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
 
-#if defined(__cplusplus)
+@implementation NSString (ClutterAdditions)
+
+#pragma mark - URL Encoding
+
+- (NSString *)URLEncodedString
+{
+    // courtesy of http://simonwoodside.com/weblog/2009/4/22/how_to_really_url_encode/
+    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
 }
-#endif
 
-#endif // Clutter_Clutter_h
+- (NSString *)URLDecodedString
+{
+    return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)self, CFSTR(""), kCFStringEncodingUTF8);
+}
+
+@end

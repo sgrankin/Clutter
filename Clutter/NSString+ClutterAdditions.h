@@ -19,22 +19,15 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <Foundation/Foundation.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface NSString (ClutterAdditions)
 
-#import "ClutterMacros.h"
+/// @name URL encoding 
 
-#ifdef __OBJC__
-#import "NSString+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
+/// Encode a string such that it is useabl eas part of a query string parameter.
+- (NSString *)URLEncodedString;
 
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Decode a URL-encoded string.
+- (NSString *)URLDecodedString;
+@end
