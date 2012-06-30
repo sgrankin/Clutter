@@ -153,6 +153,8 @@
 				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
 				97E5D842159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.h */,
 				97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */,
+				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
+				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
 				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
 			);
@@ -377,6 +379,7 @@
 				97E5D84B159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */,
 				97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */,
 				97E5D85D159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
+				97E5D862159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +395,7 @@
 				97E5D844159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */,
 				97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */,
 				97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
+				97E5D861159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
