@@ -34,6 +34,12 @@
 		97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
 		97E5D84B159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
 		97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* TestNSArray.m */; };
+		97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
+		97E5D85D159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
+		97E5D861159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
+		97E5D862159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
+		97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
+		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +91,10 @@
 		97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+ClutterAdditions.h"; path = "Clutter/NSArray+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ClutterAdditions.m"; path = "Clutter/NSArray+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E5D84C159EDD3800D233F3 /* TestNSArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSArray.m; sourceTree = "<group>"; };
+		97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchedResultsController+ClutterAdditions.h"; path = "Clutter/NSFetchedResultsController+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchedResultsController+ClutterAdditions.m"; path = "Clutter/NSFetchedResultsController+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+ClutterAdditions.h"; path = "Clutter/UISearchBar+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+ClutterAdditions.m"; path = "Clutter/UISearchBar+ClutterAdditions.m"; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */,
 				97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */,
 				97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */,
 				97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */,
@@ -107,6 +118,7 @@
 				97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */,
 				97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */,
 				97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */,
+				97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +145,8 @@
 				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
 				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
 				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
+				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
+				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
 				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
 				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
 				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
@@ -157,12 +171,13 @@
 		97BAE23415785AAD00449601 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E5D867159EE5D700D233F3 /* CoreData.framework */,
 				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
-				97BAE23715785AAD00449601 /* UIKit.framework */,
-				97BAE23915785AAD00449601 /* Foundation.framework */,
-				563CE226A06449DA8A7D1047 /* libPods.a */,
-				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
 				97E5D821159E88B100D233F3 /* CoreGraphics.framework */,
+				97BAE23915785AAD00449601 /* Foundation.framework */,
+				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
+				563CE226A06449DA8A7D1047 /* libPods.a */,
+				97BAE23715785AAD00449601 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,6 +376,7 @@
 				97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */,
 				97E5D84B159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */,
 				97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */,
+				97E5D85D159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +391,7 @@
 				97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */,
 				97E5D844159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */,
 				97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */,
+				97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +604,7 @@
 				97E5D831159E88B100D233F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

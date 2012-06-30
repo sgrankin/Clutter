@@ -19,26 +19,11 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <CoreData/CoreData.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface NSFetchedResultsController (ClutterAdditions)
 
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
-
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Returns the objects at the given index paths in the fetch results.
+/// @warning Throws if any index path is not valid.
+- (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths;
+@end

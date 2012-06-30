@@ -19,26 +19,17 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
 #import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
 
-#if defined(__cplusplus)
+@implementation NSFetchedResultsController (ClutterAdditions)
+
+- (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths
+{
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:indexPaths.count];
+    for (NSIndexPath *path in indexPaths) {
+        [result addObject:[self objectAtIndexPath:path]];
+    }
+    return result;
 }
-#endif
 
-#endif // Clutter_Clutter_h
+@end
