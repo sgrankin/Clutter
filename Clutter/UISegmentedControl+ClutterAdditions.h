@@ -22,10 +22,16 @@
 
 @interface UISegmentedControl (ClutterAdditions)
 
+/// @name Segments by Title
+
 /// Find the first segment with the specified title (case insensitive).
+/// @return Index of segment, or -1 if not found.
 - (NSInteger)segmentIndexForTitle:(NSString *)title;
+
+/// Find the first segment with the specified title (case insensitive) and select it.
 - (void)selectSegmentWithTitle:(NSString *)title;
 
-@property (readonly) NSString * titleForSelectedSegment;
+/// The title of the selected segment.
+@property (readonly, nonatomic) NSString * titleForSelectedSegment;
 
 @end

@@ -14,8 +14,26 @@
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
 		97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
 		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
+		97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* TestUISegmentedControl.m */; };
+		97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
+		97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
+		97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D821159E88B100D233F3 /* CoreGraphics.framework */; };
+		97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D826159E88B100D233F3 /* InfoPlist.strings */; };
+		97E5D82A159E88B100D233F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D829159E88B100D233F3 /* main.m */; };
+		97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D82D159E88B100D233F3 /* AppDelegate.m */; };
+		97E5D835159E8D6A00D233F3 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97E5D832159E899B00D233F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9710F37E15784F6400BA3FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97E5D81C159E88B100D233F3;
+			remoteInfo = ClutterApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		09FC2F1879B748518CC2CD12 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -34,6 +52,15 @@
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
 		97BAE25515785CCD00449601 /* TestClutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClutter.m; sourceTree = "<group>"; };
+		97E5D801159E820900D233F3 /* TestUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUISegmentedControl.m; sourceTree = "<group>"; };
+		97E5D81D159E88B100D233F3 /* ClutterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClutterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E5D821159E88B100D233F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		97E5D825159E88B100D233F3 /* ClutterApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterApp-Info.plist"; sourceTree = "<group>"; };
+		97E5D827159E88B100D233F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		97E5D829159E88B100D233F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97E5D82B159E88B100D233F3 /* ClutterApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterApp-Prefix.pch"; sourceTree = "<group>"; };
+		97E5D82C159E88B100D233F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97E5D82D159E88B100D233F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +76,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97E5D81A159E88B100D233F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */,
+				97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */,
+				97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +94,7 @@
 			children = (
 				9710F3891578507900BA3FDC /* Clutter */,
 				97BAE23B15785AAD00449601 /* ClutterTests */,
+				97E5D823159E88B100D233F3 /* ClutterApp */,
 				97BAE23415785AAD00449601 /* Frameworks */,
 				97BAE23315785AAD00449601 /* Products */,
 				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
@@ -79,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				97BAE23215785AAD00449601 /* ClutterTests.octest */,
+				97E5D81D159E88B100D233F3 /* ClutterApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +130,7 @@
 				97BAE23915785AAD00449601 /* Foundation.framework */,
 				563CE226A06449DA8A7D1047 /* libPods.a */,
 				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
+				97E5D821159E88B100D233F3 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +141,7 @@
 				97BAE23C15785AAD00449601 /* Supporting Files */,
 				97BAE25515785CCD00449601 /* TestClutter.m */,
 				97A74F9E15792FAE00C093EF /* TestMacros.m */,
+				97E5D801159E820900D233F3 /* TestUISegmentedControl.m */,
 			);
 			path = ClutterTests;
 			sourceTree = "<group>";
@@ -111,6 +152,27 @@
 				97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */,
 				97BAE23E15785AAD00449601 /* InfoPlist.strings */,
 				97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97E5D823159E88B100D233F3 /* ClutterApp */ = {
+			isa = PBXGroup;
+			children = (
+				97E5D82C159E88B100D233F3 /* AppDelegate.h */,
+				97E5D82D159E88B100D233F3 /* AppDelegate.m */,
+				97E5D824159E88B100D233F3 /* Supporting Files */,
+			);
+			path = ClutterApp;
+			sourceTree = "<group>";
+		};
+		97E5D824159E88B100D233F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97E5D825159E88B100D233F3 /* ClutterApp-Info.plist */,
+				97E5D826159E88B100D233F3 /* InfoPlist.strings */,
+				97E5D829159E88B100D233F3 /* main.m */,
+				97E5D82B159E88B100D233F3 /* ClutterApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,11 +194,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				97E5D833159E899B00D233F3 /* PBXTargetDependency */,
 			);
 			name = ClutterTests;
 			productName = ClutterTests;
 			productReference = 97BAE23215785AAD00449601 /* ClutterTests.octest */;
 			productType = "com.apple.product-type.bundle";
+		};
+		97E5D81C159E88B100D233F3 /* ClutterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97E5D82F159E88B100D233F3 /* Build configuration list for PBXNativeTarget "ClutterApp" */;
+			buildPhases = (
+				97E5D819159E88B100D233F3 /* Sources */,
+				97E5D81A159E88B100D233F3 /* Frameworks */,
+				97E5D81B159E88B100D233F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClutterApp;
+			productName = ClutterApp;
+			productReference = 97E5D81D159E88B100D233F3 /* ClutterApp.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -159,6 +239,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				97E5D81C159E88B100D233F3 /* ClutterApp */,
 				97BAE23115785AAD00449601 /* ClutterTests */,
 			);
 		};
@@ -170,6 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97E5D81B159E88B100D233F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,16 +316,43 @@
 				97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */,
 				97BAE25615785CCD00449601 /* TestClutter.m in Sources */,
 				97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */,
+				97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97E5D819159E88B100D233F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97E5D82A159E88B100D233F3 /* main.m in Sources */,
+				97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */,
+				97E5D835159E8D6A00D233F3 /* UISegmentedControl+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97E5D833159E899B00D233F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97E5D81C159E88B100D233F3 /* ClutterApp */;
+			targetProxy = 97E5D832159E899B00D233F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97BAE23E15785AAD00449601 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				97BAE23F15785AAD00449601 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97E5D826159E88B100D233F3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97E5D827159E88B100D233F3 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -264,6 +380,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClutterApp.app/ClutterApp";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -290,6 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -300,6 +418,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClutterApp.app/ClutterApp";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -319,8 +438,76 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		97E5D830159E88B100D233F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClutterApp/ClutterApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ClutterApp/ClutterApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97E5D831159E88B100D233F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ClutterApp/ClutterApp-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ClutterApp/ClutterApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -344,6 +531,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		97E5D82F159E88B100D233F3 /* Build configuration list for PBXNativeTarget "ClutterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97E5D830159E88B100D233F3 /* Debug */,
+				97E5D831159E88B100D233F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

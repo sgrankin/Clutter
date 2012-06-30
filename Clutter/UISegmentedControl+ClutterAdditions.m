@@ -23,6 +23,8 @@
 
 @implementation UISegmentedControl (ClutterAdditions)
 
+#pragma mark - Segments by Title
+
 - (NSInteger)segmentIndexForTitle:(NSString *)title
 {
     for (NSInteger i = 0; i < self.numberOfSegments; ++i) {
@@ -42,4 +44,5 @@
 {
     return [self titleForSegmentAtIndex:self.selectedSegmentIndex];
 }
+
 @end
