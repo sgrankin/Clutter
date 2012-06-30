@@ -1,4 +1,4 @@
 platform :ios
-target :test do
+target :ClutterTests do
     dependency 'Kiwi'
 end

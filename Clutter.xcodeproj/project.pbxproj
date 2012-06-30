@@ -12,14 +12,14 @@
 		97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
 		97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
-		97BAE25115785AF000449601 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE25015785AF000449601 /* libPods-test.a */; };
 		97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
-		97BAE25415785B5700449601 /* Pods-test.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE25315785B5700449601 /* Pods-test.xcconfig */; };
 		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
+		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09FC2F1879B748518CC2CD12 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClutterTests.xcconfig"; path = "Pods/Pods-ClutterTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		563CE226A06449DA8A7D1047 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9710F38515784F7B00BA3FDC /* Clutter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Clutter.h; path = Clutter/Clutter.h; sourceTree = "<group>"; };
 		9710F38A1578508C00BA3FDC /* ClutterMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClutterMacros.h; path = Clutter/ClutterMacros.h; sourceTree = "<group>"; };
@@ -27,15 +27,14 @@
 		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97A74F9E15792FAE00C093EF /* TestMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMacros.m; sourceTree = "<group>"; };
 		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		97BAE23715785AAD00449601 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		97BAE23915785AAD00449601 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23715785AAD00449601 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		97BAE23915785AAD00449601 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterTests-Info.plist"; sourceTree = "<group>"; };
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
-		97BAE25015785AF000449601 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
-		97BAE25315785B5700449601 /* Pods-test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "../Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
 		97BAE25515785CCD00449601 /* TestClutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClutter.m; sourceTree = "<group>"; };
+		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BAE25115785AF000449601 /* libPods-test.a in Frameworks */,
 				97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */,
 				97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */,
 				97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */,
+				EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +58,9 @@
 				9710F3891578507900BA3FDC /* Clutter */,
 				97BAE23B15785AAD00449601 /* ClutterTests */,
 				97BAE23415785AAD00449601 /* Frameworks */,
-				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
 				97BAE23315785AAD00449601 /* Products */,
+				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
+				3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,7 +90,7 @@
 				97BAE23715785AAD00449601 /* UIKit.framework */,
 				97BAE23915785AAD00449601 /* Foundation.framework */,
 				563CE226A06449DA8A7D1047 /* libPods.a */,
-				97BAE25015785AF000449601 /* libPods-test.a */,
+				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,7 +98,6 @@
 		97BAE23B15785AAD00449601 /* ClutterTests */ = {
 			isa = PBXGroup;
 			children = (
-				97BAE25315785B5700449601 /* Pods-test.xcconfig */,
 				97BAE23C15785AAD00449601 /* Supporting Files */,
 				97BAE25515785CCD00449601 /* TestClutter.m */,
 				97A74F9E15792FAE00C093EF /* TestMacros.m */,
@@ -128,6 +127,7 @@
 				97BAE22F15785AAD00449601 /* Resources */,
 				97BAE23015785AAD00449601 /* ShellScript */,
 				CCC2017173E94F0EBF59D264 /* Copy Pods Resources */,
+				744637A8403344C499EBBC16 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,13 +170,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */,
-				97BAE25415785B5700449601 /* Pods-test.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		744637A8403344C499EBBC16 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ClutterTests-resources.sh\"\n";
+		};
 		97BAE23015785AAD00449601 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,7 +260,7 @@
 		};
 		97BAE24515785AAD00449601 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97BAE25315785B5700449601 /* Pods-test.xcconfig */;
+			baseConfigurationReference = 3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -283,7 +296,7 @@
 		};
 		97BAE24615785AAD00449601 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97BAE25315785B5700449601 /* Pods-test.xcconfig */;
+			baseConfigurationReference = 3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
