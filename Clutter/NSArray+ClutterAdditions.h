@@ -19,25 +19,15 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <Foundation/Foundation.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface NSArray (ClutterAdditions)
 
-#import "ClutterMacros.h"
+/// First object in the array, or nil if array is empty.
+- (id)firstObject;
 
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
+/// @name Block operations
 
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Map an array by applying a given block to each element.
+- (NSArray *)mappedArrayUsingBlock:(id (^)(id obj))mapping;
+@end

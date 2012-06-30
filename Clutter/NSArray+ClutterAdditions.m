@@ -19,25 +19,23 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
 #import "NSArray+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
 
-#if defined(__cplusplus)
+@implementation NSArray (ClutterAdditions)
+
+- (id)firstObject
+{
+    return self.count > 0 ? self[0] : nil;
 }
-#endif
 
-#endif // Clutter_Clutter_h
+#pragma mark - Block operations
+
+- (NSArray *)mappedArrayUsingBlock:(id (^)(id obj))mapping
+{
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [result addObject:mapping(obj)];
+    }];
+    return result;
+}
+@end
