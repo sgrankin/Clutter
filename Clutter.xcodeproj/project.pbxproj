@@ -25,6 +25,9 @@
 		97E5D838159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */; };
 		97E5D839159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */; };
 		97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83A159EC81E00D233F3 /* TestNSString.m */; };
+		97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
+		97E5D83F159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
+		97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D840159ED0E000D233F3 /* TestNSURL.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ClutterAdditions.h"; path = "Clutter/NSString+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ClutterAdditions.m"; path = "Clutter/NSString+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E5D83A159EC81E00D233F3 /* TestNSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSString.m; sourceTree = "<group>"; };
+		97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+ClutterAdditions.h"; path = "Clutter/NSURL+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+ClutterAdditions.m"; path = "Clutter/NSURL+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97E5D840159ED0E000D233F3 /* TestNSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSURL.m; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,8 @@
 				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
 				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
 				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
+				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
+				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
 				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
 			);
@@ -150,6 +158,7 @@
 				97BAE25515785CCD00449601 /* TestClutter.m */,
 				97A74F9E15792FAE00C093EF /* TestMacros.m */,
 				97E5D83A159EC81E00D233F3 /* TestNSString.m */,
+				97E5D840159ED0E000D233F3 /* TestNSURL.m */,
 				97E5D801159E820900D233F3 /* TestUISegmentedControl.m */,
 			);
 			path = ClutterTests;
@@ -328,6 +337,8 @@
 				97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */,
 				97E5D839159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */,
 				97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */,
+				97E5D83F159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */,
+				97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +350,7 @@
 				97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */,
 				97E5D835159E8D6A00D233F3 /* UISegmentedControl+ClutterAdditions.m in Sources */,
 				97E5D838159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */,
+				97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

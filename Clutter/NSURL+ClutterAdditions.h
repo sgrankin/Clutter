@@ -19,23 +19,15 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+@interface NSURL (ClutterAdditions)
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+/// @name URL Append Query
 
-#import "ClutterMacros.h"
+/// Create a URL by appending ?{query} to it.
+/// @warning Does not check that there is not already a query string.
+- (NSURL *)URLByAppendingQuery:(NSString *)query;
 
-#ifdef __OBJC__
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
-
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Create a query string from the arguments dictionary, e.g. ?{key1}={value1}&{key1}={value2}, where keys and values are URL encoded, and append it to the url.
+/// @warning Does not check that there is not already a query string.
+- (NSURL *)URLByAppendingQueryArguments:(NSDictionary *)arguments;
+@end

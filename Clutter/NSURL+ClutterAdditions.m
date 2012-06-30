@@ -19,23 +19,28 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
-#import "NSString+ClutterAdditions.h"
 #import "NSURL+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
+#import "Clutter.h"
 
-#if defined(__cplusplus)
+@implementation NSURL (ClutterAdditions)
+
+#pragma mark - URL Append Query
+
+- (NSURL *)URLByAppendingQuery:(NSString *)query
+{
+    return [NSURL URLWithString:[self.absoluteString stringByAppendingFormat:@"?%@", query]];
 }
-#endif
 
-#endif // Clutter_Clutter_h
+- (NSURL *)URLByAppendingQueryArguments:(NSDictionary *)arguments
+{
+    NSURL *rv = self;
+    if (arguments && arguments.count) {
+        NSMutableArray *argumentsList = [[NSMutableArray alloc] initWithCapacity:arguments.count];
+        [arguments enumerateKeysAndObjectsUsingBlock:^(NSObject *key, NSObject *obj, BOOL *stop) {
+            [argumentsList addObject:[NSString stringWithFormat:@"%@=%@", [[key description] URLEncodedString], [[obj description] URLEncodedString]]];
+        }];
+        rv = [self URLByAppendingQuery:[argumentsList componentsJoinedByString:@"&"]];
+    }
+    return rv;
+}
+@end
