@@ -19,24 +19,12 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <Foundation/Foundation.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface NSURLRequest (ClutterAdditions)
 
-#import "ClutterMacros.h"
+/// @name Description
 
-#ifdef __OBJC__
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
-
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Describe the URL Request as a curl command.
+- (NSString *)description;
+@end

@@ -19,24 +19,21 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
 #import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
+#import "Clutter.h"
 
-#if defined(__cplusplus)
+@implementation NSURLRequest (ClutterAdditions)
+
+#pragma mark - Description
+
+- (NSString *)description
+{
+    NSMutableString *s = [NSMutableString string];
+    [s appendFormat:@"curl -X %@ ", self.HTTPMethod];
+    for (NSString *header in self.allHTTPHeaderFields) {
+        [s appendFormat:@"-H \"%@: %@\" ", header, [self valueForHTTPHeaderField:header]];
+    }
+    [s appendFormat:@"\"%@\"", self.URL];
+    return s;
 }
-#endif
-
-#endif // Clutter_Clutter_h
+@end
