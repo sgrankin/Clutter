@@ -1,18 +1,7 @@
-desc 'Update headers in all files to match the LICENSE'
-task :license do
-  license = open('LICENSE') do |io|
-    io.lines.map {|line| ('// ' + line).rstrip + $/}
-  end
+# encoding: UTF-8
 
-  sources = FileList['Clutter/**/*.{h,m}']
-  sources.each do |source|
-    # drop the leading comment block and append the license
-    lines = open(source) {|io| io.lines.to_a}
+SOURCES = FileList['Clutter/**/*.{h,m}']
 
-    # check if the license was changed; avoid rewriting the file if not
-    first_line = lines.find_index {|l| /^\/\// !~ l}
-    old_license, lines = lines[0...first_line], lines[first_line..lines.length]
-    next if old_license == license
-    open(source, 'w') {|io| io.write((license + lines).join)}
-  end
-end
+TESTFLIGHT_API_TOKEN = nil
+TESTFLIGHT_TEAM_TOKEN = nil
+
