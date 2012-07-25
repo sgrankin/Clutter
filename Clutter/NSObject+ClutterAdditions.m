@@ -23,16 +23,40 @@
 
 #import <objc/runtime.h>
 
-const char *CLNSObjectObserver_Key = "CLNSObjectObserver";
-
-typedef void (^ObservationBlock)(id self);
-
+/// Helper for KVO observation.  Will be retained by the observed object.
 @interface CLNSObjectObserver : NSObject
 @property NSMutableDictionary *blocks; // keyPath -> [block]
 
-- (void)addObserverOfObject:(id)object forKeyPath:(NSString *)keyPath block:(ObservationBlock)block;
+- (void)addObserverOfObject:(id)object forKeyPath:(NSString *)keyPath block:(void(^)(id self))block;
 - (void)removeObserverOfObject:(id)object forKeyPath:(NSString *)keyPath;
 @end
+
+
+@implementation NSObject (ClutterAdditions)
+
+#pragma mark - Block-based KVO
+- (CLNSObjectObserver *)cl_kvoObjectObserver
+{
+    static char const *CLNSObjectObserver_Key = "CLNSObjectObserver";
+    CLNSObjectObserver *observer = objc_getAssociatedObject(self, CLNSObjectObserver_Key);
+    if (!observer) {
+        observer = [CLNSObjectObserver new];
+        objc_setAssociatedObject(self, CLNSObjectObserver_Key, observer, OBJC_ASSOCIATION_RETAIN);
+    }
+    return observer;
+}
+
+- (void)addObserverForKeyPath:(NSString *)keyPath withBlock:(void(^)(id self))block
+{
+    [[self cl_kvoObjectObserver] addObserverOfObject:self forKeyPath:keyPath block:block];
+}
+
+- (void)removeObserversForKeyPath:(NSString *)keyPath
+{
+    [[self cl_kvoObjectObserver] removeObserverOfObject:self forKeyPath:keyPath];
+}
+@end
+
 
 @implementation CLNSObjectObserver
 - (id)init
@@ -43,7 +67,7 @@ typedef void (^ObservationBlock)(id self);
     return self;
 }
 
-- (void)addObserverOfObject:(id)object forKeyPath:(NSString *)keyPath block:(ObservationBlock)block
+- (void)addObserverOfObject:(id)object forKeyPath:(NSString *)keyPath block:(void(^)(id self))block
 {
     @synchronized (self.blocks) {
         if (!self.blocks[keyPath])
@@ -63,30 +87,7 @@ typedef void (^ObservationBlock)(id self);
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    ObservationBlock block = (__bridge ObservationBlock)context;
+    void(^block)(id) = (__bridge void(^)(id))context;
     block(object);
-}
-
-@end
-
-@implementation NSObject (ClutterAdditions)
-- (CLNSObjectObserver *)objectObserver
-{
-    CLNSObjectObserver *observer = objc_getAssociatedObject(self, CLNSObjectObserver_Key);
-    if (!observer) {
-        observer = [CLNSObjectObserver new];
-        objc_setAssociatedObject(self, CLNSObjectObserver_Key, observer, OBJC_ASSOCIATION_RETAIN);
-    }
-    return observer;
-}
-
-- (void)addObserverForKeyPath:(NSString *)keyPath withBlock:(ObservationBlock)block
-{
-    [[self objectObserver] addObserverOfObject:self forKeyPath:keyPath block:block];
-}
-
-- (void)removeObserversForKeyPath:(NSString *)keyPath
-{
-    [[self objectObserver] removeObserverOfObject:self forKeyPath:keyPath];
 }
 @end

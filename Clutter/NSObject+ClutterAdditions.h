@@ -23,7 +23,12 @@
 
 @interface NSObject (ClutterAdditions)
 
+/// @name Block-based KVO
+
+/// Add block to execute for KVO events for keyPath on self.
 - (void)addObserverForKeyPath:(NSString *)keyPath withBlock:(void (^)(id self))block;
+
+/// Remove all blocks registered for KVO events for keyPath on self.
 - (void)removeObserversForKeyPath:(NSString *)keyPath;
 
 @end

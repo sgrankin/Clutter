@@ -21,7 +21,7 @@
 SPEC_BEGIN(NSObjectSpec)
 
 describe(@"NSObject", ^{
-    describe(@"KVOBlocks", ^{
+    describe(@"Block-based KVO", ^{
         it(@"can add and remove observers", ^{
             KVOTestObject *object = [KVOTestObject new];
             __block BOOL observed = NO;
