@@ -19,6 +19,10 @@
 // SOFTWARE.
 //
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
+#import <UIKit/UIKit.h>
 
 @interface UISegmentedControl (ClutterAdditions)
 
@@ -35,3 +39,5 @@
 @property (readonly, nonatomic) NSString * titleForSelectedSegment;
 
 @end
+
+#endif

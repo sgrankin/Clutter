@@ -19,6 +19,8 @@
 // SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
+
 @interface NSURL (ClutterAdditions)
 
 /// @name URL Append Query

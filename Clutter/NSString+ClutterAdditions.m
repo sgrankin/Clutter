@@ -28,7 +28,7 @@
 - (NSString *)URLEncodedString
 {
     // courtesy of http://simonwoodside.com/weblog/2009/4/22/how_to_really_url_encode/
-    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
+    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
 }
 
 - (NSString *)URLDecodedString

@@ -9,39 +9,36 @@
 /* Begin PBXBuildFile section */
 		9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9728F4C015BF7DE600849A6E /* libobjc.dylib */; };
 		972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */; };
-		972D4A8D15BF7624006B8AD9 /* NSObject+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */; };
+		977CA87C15C0A819009376AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977CA87715C0A79A009376AD /* UIKit.framework */; };
+		977CA87D15C0A851009376AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977CA87715C0A79A009376AD /* UIKit.framework */; };
+		977CA88015C0A8CE009376AD /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
+		977CA88115C0A8CE009376AD /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
+		977CA88215C0A8CE009376AD /* NSObject+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */; };
+		977CA88315C0A8CE009376AD /* NSString+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */; };
+		977CA88415C0A8CE009376AD /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
+		977CA88515C0A8CE009376AD /* NSURLRequest+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */; };
+		977CA88615C0A8CE009376AD /* UIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */; };
+		977CA88715C0A8CE009376AD /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
+		977CA88815C0A8CE009376AD /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
 		97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* TestMacros.m */; };
 		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
-		97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
-		97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
 		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
 		97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* TestUISegmentedControl.m */; };
-		97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
-		97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
-		97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D821159E88B100D233F3 /* CoreGraphics.framework */; };
 		97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D826159E88B100D233F3 /* InfoPlist.strings */; };
 		97E5D82A159E88B100D233F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D829159E88B100D233F3 /* main.m */; };
 		97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D82D159E88B100D233F3 /* AppDelegate.m */; };
-		97E5D835159E8D6A00D233F3 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
-		97E5D838159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */; };
 		97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83A159EC81E00D233F3 /* TestNSString.m */; };
-		97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
 		97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D840159ED0E000D233F3 /* TestNSURL.m */; };
-		97E5D844159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */; };
 		97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */; };
-		97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
 		97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* TestNSArray.m */; };
-		97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
-		97E5D861159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
 		97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
-		97E5D86C159EE68900D233F3 /* UIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97E5D832159E899B00D233F3 /* PBXContainerItemProxy */ = {
+		977CA87E15C0A8C7009376AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9710F37E15784F6400BA3FDC /* Project object */;
 			proxyType = 1;
@@ -60,11 +57,12 @@
 		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
 		9728F4C015BF7DE600849A6E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libobjc.dylib; sourceTree = DEVELOPER_DIR; };
 		972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSObject.m; sourceTree = "<group>"; };
+		977CA87515C0A796009376AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		977CA87715C0A79A009376AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		977CA87915C0A7A1009376AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		97A74F9E15792FAE00C093EF /* TestMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMacros.m; sourceTree = "<group>"; };
 		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		97BAE23715785AAD00449601 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		97BAE23915785AAD00449601 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterTests-Info.plist"; sourceTree = "<group>"; };
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 		97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ClutterAdditions.m"; path = "Clutter/NSObject+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E5D801159E820900D233F3 /* TestUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUISegmentedControl.m; sourceTree = "<group>"; };
 		97E5D81D159E88B100D233F3 /* ClutterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClutterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		97E5D821159E88B100D233F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		97E5D825159E88B100D233F3 /* ClutterApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterApp-Info.plist"; sourceTree = "<group>"; };
 		97E5D827159E88B100D233F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97E5D829159E88B100D233F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,9 +106,8 @@
 			files = (
 				97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */,
 				97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */,
-				97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */,
-				97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */,
 				EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */,
+				977CA87D15C0A851009376AD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,10 +116,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */,
-				97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */,
-				97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */,
-				97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */,
 				97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */,
+				977CA87C15C0A819009376AD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,22 +143,22 @@
 				9710F38515784F7B00BA3FDC /* Clutter.h */,
 				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
 				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
-				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
 				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
-				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
 				97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */,
-				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
 				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
-				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
 				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
-				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
 				97E5D842159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.h */,
-				97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */,
 				97E5D86A159EE68900D233F3 /* UIImage+ClutterAdditions.h */,
-				97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */,
 				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
-				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
+				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
+				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
+				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
+				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
+				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
+				97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */,
+				97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */,
+				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
 				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
 			);
 			name = Clutter;
@@ -182,14 +176,14 @@
 		97BAE23415785AAD00449601 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97E5D867159EE5D700D233F3 /* CoreData.framework */,
-				97E5D821159E88B100D233F3 /* CoreGraphics.framework */,
-				97BAE23915785AAD00449601 /* Foundation.framework */,
-				9728F4C015BF7DE600849A6E /* libobjc.dylib */,
 				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
 				563CE226A06449DA8A7D1047 /* libPods.a */,
+				9728F4C015BF7DE600849A6E /* libobjc.dylib */,
+				97E5D867159EE5D700D233F3 /* CoreData.framework */,
+				977CA87515C0A796009376AD /* CoreGraphics.framework */,
+				977CA87915C0A7A1009376AD /* Foundation.framework */,
 				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
-				97BAE23715785AAD00449601 /* UIKit.framework */,
+				977CA87715C0A79A009376AD /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,7 +252,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				97E5D833159E899B00D233F3 /* PBXTargetDependency */,
+				977CA87F15C0A8C7009376AD /* PBXTargetDependency */,
 			);
 			name = ClutterTests;
 			productName = ClutterTests;
@@ -394,25 +388,25 @@
 			files = (
 				97E5D82A159E88B100D233F3 /* main.m in Sources */,
 				97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */,
-				97E5D835159E8D6A00D233F3 /* UISegmentedControl+ClutterAdditions.m in Sources */,
-				97E5D838159EC49600D233F3 /* NSString+ClutterAdditions.m in Sources */,
-				97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */,
-				97E5D844159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */,
-				97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */,
-				97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
-				97E5D861159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */,
-				97E5D86C159EE68900D233F3 /* UIImage+ClutterAdditions.m in Sources */,
-				972D4A8D15BF7624006B8AD9 /* NSObject+ClutterAdditions.m in Sources */,
+				977CA88015C0A8CE009376AD /* NSArray+ClutterAdditions.m in Sources */,
+				977CA88115C0A8CE009376AD /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
+				977CA88215C0A8CE009376AD /* NSObject+ClutterAdditions.m in Sources */,
+				977CA88315C0A8CE009376AD /* NSString+ClutterAdditions.m in Sources */,
+				977CA88415C0A8CE009376AD /* NSURL+ClutterAdditions.m in Sources */,
+				977CA88515C0A8CE009376AD /* NSURLRequest+ClutterAdditions.m in Sources */,
+				977CA88615C0A8CE009376AD /* UIImage+ClutterAdditions.m in Sources */,
+				977CA88715C0A8CE009376AD /* UISearchBar+ClutterAdditions.m in Sources */,
+				977CA88815C0A8CE009376AD /* UISegmentedControl+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		97E5D833159E899B00D233F3 /* PBXTargetDependency */ = {
+		977CA87F15C0A8C7009376AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 97E5D81C159E88B100D233F3 /* ClutterApp */;
-			targetProxy = 97E5D832159E899B00D233F3 /* PBXContainerItemProxy */;
+			targetProxy = 977CA87E15C0A8C7009376AD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -547,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ClutterApp/ClutterApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,7 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ClutterApp/ClutterApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

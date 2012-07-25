@@ -20,6 +20,7 @@
 //
 
 #import "NSURL+ClutterAdditions.h"
+
 #import "Clutter.h"
 
 @implementation NSURL (ClutterAdditions)

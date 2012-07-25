@@ -21,6 +21,9 @@
 
 #import "UISegmentedControl+ClutterAdditions.h"
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 @implementation UISegmentedControl (ClutterAdditions)
 
 #pragma mark - Segments by Title
@@ -46,3 +49,5 @@
 }
 
 @end
+
+#endif

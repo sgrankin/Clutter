@@ -21,9 +21,14 @@
 
 #import <CoreData/CoreData.h>
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 @interface NSFetchedResultsController (ClutterAdditions)
 
 /// Returns the objects at the given index paths in the fetch results.
 /// @warning Throws if any index path is not valid.
 - (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths;
 @end
+
+#endif

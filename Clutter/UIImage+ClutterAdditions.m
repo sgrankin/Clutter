@@ -21,6 +21,9 @@
 
 #import "UIImage+ClutterAdditions.h"
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 @implementation UIImage (ClutterAdditions)
 
 #pragma mark - Resize
@@ -106,3 +109,5 @@
     return result;
 }
 @end
+
+#endif

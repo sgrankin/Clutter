@@ -21,6 +21,9 @@
 
 #import "UISearchBar+ClutterAdditions.h"
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 @implementation UISearchBar (ClutterAdditions)
 
 #pragma mark - Scope Buttons by Title
@@ -46,3 +49,5 @@
 }
 
 @end
+
+#endif

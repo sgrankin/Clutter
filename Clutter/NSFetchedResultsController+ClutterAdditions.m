@@ -21,6 +21,9 @@
 
 #import "NSFetchedResultsController+ClutterAdditions.h"
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 @implementation NSFetchedResultsController (ClutterAdditions)
 
 - (NSArray *)objectsAtIndexPaths:(NSArray *)indexPaths
@@ -33,3 +36,5 @@
 }
 
 @end
+
+#endif
