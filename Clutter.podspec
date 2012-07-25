@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   # s.resources = "icon.png"
   # s.preserve_paths = 'moreinfo.txt'
 
+  s.prefix_header_contents = '#import "Clutter.h"'
   s.frameworks = 'Foundation', 'UIKit', 'CoreData'
   # s.libraries = 'objc'
   s.requires_arc = true
