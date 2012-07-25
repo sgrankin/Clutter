@@ -1,4 +1,4 @@
 platform :ios
 target :ClutterTests do
-    dependency 'Kiwi'
+    pod 'Kiwi'
 end
