@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9728F4B915BF768800849A6E /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
-		9728F4BB15BF768A00849A6E /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
-		9728F4BC15BF768D00849A6E /* NSObject+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */; };
-		9728F4BD15BF769000849A6E /* NSString+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */; };
-		9728F4BE15BF769200849A6E /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
+		9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9728F4C015BF7DE600849A6E /* libobjc.dylib */; };
 		972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */; };
 		972D4A8D15BF7624006B8AD9 /* NSObject+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */; };
 		97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* TestMacros.m */; };
@@ -19,7 +15,6 @@
 		97BAE23815785AAD00449601 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
 		97BAE23A15785AAD00449601 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23915785AAD00449601 /* Foundation.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
-		97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
 		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
 		97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* TestUISegmentedControl.m */; };
 		97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23715785AAD00449601 /* UIKit.framework */; };
@@ -34,17 +29,14 @@
 		97E5D83E159ECF1700D233F3 /* NSURL+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */; };
 		97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D840159ED0E000D233F3 /* TestNSURL.m */; };
 		97E5D844159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */; };
-		97E5D845159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */; };
 		97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */; };
 		97E5D84A159EDC8900D233F3 /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
 		97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* TestNSArray.m */; };
 		97E5D85C159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */; };
 		97E5D861159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
-		97E5D862159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
 		97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E5D86C159EE68900D233F3 /* UIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */; };
-		97E5D86D159EE68900D233F3 /* UIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +58,7 @@
 		9710F38A1578508C00BA3FDC /* ClutterMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ClutterMacros.h; path = Clutter/ClutterMacros.h; sourceTree = "<group>"; };
 		9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+ClutterAdditions.h"; path = "Clutter/UISegmentedControl+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+ClutterAdditions.m"; path = "Clutter/UISegmentedControl+ClutterAdditions.m"; sourceTree = "<group>"; };
+		9728F4C015BF7DE600849A6E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libobjc.dylib; sourceTree = DEVELOPER_DIR; };
 		972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSObject.m; sourceTree = "<group>"; };
 		97A74F9E15792FAE00C093EF /* TestMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMacros.m; sourceTree = "<group>"; };
 		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */,
 				97E5D81F159E88B100D233F3 /* UIKit.framework in Frameworks */,
 				97E5D820159E88B100D233F3 /* Foundation.framework in Frameworks */,
 				97E5D822159E88B100D233F3 /* CoreGraphics.framework in Frameworks */,
@@ -189,11 +183,12 @@
 			isa = PBXGroup;
 			children = (
 				97E5D867159EE5D700D233F3 /* CoreData.framework */,
-				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
 				97E5D821159E88B100D233F3 /* CoreGraphics.framework */,
 				97BAE23915785AAD00449601 /* Foundation.framework */,
+				9728F4C015BF7DE600849A6E /* libobjc.dylib */,
 				FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */,
 				563CE226A06449DA8A7D1047 /* libPods.a */,
+				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
 				97BAE23715785AAD00449601 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -382,23 +377,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BAE25215785B1A00449601 /* UISegmentedControl+ClutterAdditions.m in Sources */,
 				97BAE25615785CCD00449601 /* TestClutter.m in Sources */,
 				97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */,
 				97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */,
 				97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */,
 				97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */,
-				97E5D845159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m in Sources */,
 				97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */,
 				97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */,
-				97E5D862159EE2FA00D233F3 /* UISearchBar+ClutterAdditions.m in Sources */,
-				97E5D86D159EE68900D233F3 /* UIImage+ClutterAdditions.m in Sources */,
 				972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */,
-				9728F4B915BF768800849A6E /* NSFetchedResultsController+ClutterAdditions.m in Sources */,
-				9728F4BB15BF768A00849A6E /* NSArray+ClutterAdditions.m in Sources */,
-				9728F4BC15BF768D00849A6E /* NSObject+ClutterAdditions.m in Sources */,
-				9728F4BD15BF769000849A6E /* NSString+ClutterAdditions.m in Sources */,
-				9728F4BE15BF769200849A6E /* NSURL+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -461,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
