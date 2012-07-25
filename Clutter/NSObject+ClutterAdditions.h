@@ -19,27 +19,11 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <Foundation/Foundation.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface NSObject (ClutterAdditions)
 
-#import "ClutterMacros.h"
+- (void)addObserverForKeyPath:(NSString *)keyPath withBlock:(void (^)(id self))block;
+- (void)removeObserversForKeyPath:(NSString *)keyPath;
 
-#ifdef __OBJC__
-#import "NSObject+ClutterAdditions.h"
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
-
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+@end
