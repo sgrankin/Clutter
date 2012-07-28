@@ -19,30 +19,16 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <UIKit/UIKit.h>
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
+@interface UIApplication (ClutterAdditions)
 
-#import "ClutterMacros.h"
+/// @name UIApplicationDelegate observer
 
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSObject+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UIApplication+ClutterAdditions.h"
-#import "UIImage+ClutterAdditions.h"
-#import "UISearchBar+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#endif // __OBJC__
+/// Add an observer object that will be notified of all UIApplication notifications that it supports.
+- (void)addObserver:(id<UIApplicationDelegate>)delegate;
 
-#if defined(__cplusplus)
-}
-#endif
+/// Remove an observer object added via addObserver.
+- (void)removeObserver:(id<UIApplicationDelegate>)delegate;
 
-#endif // Clutter_Clutter_h
+@end
