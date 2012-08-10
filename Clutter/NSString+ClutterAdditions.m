@@ -36,4 +36,19 @@
     return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)self, CFSTR(""), kCFStringEncodingUTF8);
 }
 
+
+#pragma mark - Path Components
+
+- (NSString *)stringByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION
+{
+    va_list args;
+    va_start(args, firstComponent);
+    
+    NSString *result = [self stringByAppendingPathComponent:firstComponent];
+    NSString *next;
+    while ((next = va_arg(args, NSString *))) {
+        result = [result stringByAppendingPathComponent:next];
+    }
+    return result;
+}
 @end

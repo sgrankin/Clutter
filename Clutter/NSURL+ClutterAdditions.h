@@ -32,4 +32,11 @@
 /// Create a query string from the arguments dictionary, e.g. ?{key1}={value1}&{key1}={value2}, where keys and values are URL encoded, and append it to the url.
 /// @warning Does not check that there is not already a query string.
 - (NSURL *)URLByAppendingQueryArguments:(NSDictionary *)arguments;
+
+
+/// @name Path Components
+
+/// URL by appending multiple path components
+- (NSURL *)URLByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
+
 @end

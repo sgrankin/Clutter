@@ -30,4 +30,10 @@
 
 /// Decode a URL-encoded string.
 - (NSString *)URLDecodedString;
+
+
+/// @name Path Components
+
+/// Append multiple path components to a string.
+- (NSString *)stringByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
 @end

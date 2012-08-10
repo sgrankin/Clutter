@@ -44,4 +44,21 @@
     }
     return rv;
 }
+
+
+#pragma mark - Path Components
+
+- (NSURL *)URLByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION
+{
+    va_list args;
+    va_start(args, firstComponent);
+    
+    NSURL *result = [self URLByAppendingPathComponent:firstComponent];
+    NSString *next;
+    while ((next = va_arg(args, NSString *))) {
+        result = [result URLByAppendingPathComponent:next];
+    }
+    return result;
+}
+
 @end
