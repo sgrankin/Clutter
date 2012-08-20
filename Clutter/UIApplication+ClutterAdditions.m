@@ -21,6 +21,9 @@
 
 #import "UIApplication+ClutterAdditions.h"
 
+#import <TargetConditionals.h>
+#if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+
 #import <objc/runtime.h>
 
 // Helper for UIApplication/-addObserver.  Should be owned by the delegate.
@@ -123,3 +126,5 @@ static char const *CLUIApplicationDelegateObserver_Key = "UIApplicationDelegateN
     }
 }
 @end
+
+#endif
