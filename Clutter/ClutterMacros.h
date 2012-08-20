@@ -22,13 +22,6 @@
 #ifndef Clutter_ClutterMacros_h
 #define Clutter_ClutterMacros_h
 
-#import <objc/runtime.h>
-
-#pragma mark - objc
-
-#define objc_dynamic_cast(cls, obj) ((cls*)([obj isKindOfClass:(Class)objc_getClass(#cls)] ? obj : nil))
-
-
 #pragma mark - math
 
 #define CLAMP(a,x,b) MAX((a), MIN((b), (x)))

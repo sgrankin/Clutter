@@ -40,6 +40,20 @@ describe(@"NSObject", ^{
             [[theValue(observed) should] equal:@NO];
         });
     });
+    
+    describe(@"Cast", ^{
+        it(@"can downcast", ^{
+            NSMutableArray *d = [NSMutableArray array];
+            NSArray *b = d;
+            d = [NSMutableArray cast:b];
+            [d shouldNotBeNil];
+        });
+        it(@"rejects incompatible types", ^{
+            NSMutableArray *a = [NSMutableArray array];
+            NSString *s = [NSString cast:a];
+            [s shouldBeNil];
+        });
+    });
 });
 
 SPEC_END

@@ -31,4 +31,8 @@
 /// Remove all blocks registered for KVO events for keyPath on self.
 - (void)removeObserversForKeyPath:(NSString *)keyPath;
 
+
+/// @name Cast
++ (instancetype)cast:(id)obj;
+
 @end

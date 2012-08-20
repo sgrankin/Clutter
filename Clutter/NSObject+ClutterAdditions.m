@@ -55,6 +55,15 @@
 {
     [[self cl_kvoObjectObserver] removeObserverOfObject:self forKeyPath:keyPath];
 }
+
+
+#pragma mark - Cast
++ (instancetype)cast:(id)obj
+{
+    if ([obj isKindOfClass:self])
+        return obj;
+    return nil;
+}
 @end
 
 
