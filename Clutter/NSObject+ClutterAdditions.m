@@ -81,6 +81,7 @@
     @synchronized (self.blocks) {
         if (!self.blocks[keyPath])
             self.blocks[keyPath] = [NSMutableArray array];
+        block = [block copy]; // explicit copy of the block, since we'll need a stable pointer for the bridge cast
         [self.blocks[keyPath] addObject:block];
         [object addObserver:self forKeyPath:keyPath options:0 context:(__bridge void *)(block)];
     }
