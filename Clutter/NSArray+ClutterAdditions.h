@@ -30,4 +30,7 @@
 
 /// Map an array by applying a given block to each element.
 - (NSArray *)mappedArrayUsingBlock:(id (^)(id obj))mapping;
+
+/// Filter an array to those elements for which predicate returns YES.
+- (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj))predicate;
 @end

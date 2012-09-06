@@ -38,4 +38,14 @@
     }];
     return result;
 }
+
+- (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj))predicate
+{
+    NSMutableArray *result = [NSMutableArray array];
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+       if (predicate(obj))
+           [result addObject:obj];
+    }];
+    return result;
+}
 @end
