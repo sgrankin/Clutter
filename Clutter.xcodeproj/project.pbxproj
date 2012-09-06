@@ -26,6 +26,7 @@
 		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
 		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
+		97C519C015F9399600424734 /* UITableViewCell+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */; };
 		97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* TestUISegmentedControl.m */; };
 		97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D826159E88B100D233F3 /* InfoPlist.strings */; };
 		97E5D82A159E88B100D233F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D829159E88B100D233F3 /* main.m */; };
@@ -72,6 +73,8 @@
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
 		97BAE25515785CCD00449601 /* TestClutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClutter.m; sourceTree = "<group>"; };
+		97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+ClutterAdditions.h"; path = "Clutter/UITableViewCell+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+ClutterAdditions.m"; path = "Clutter/UITableViewCell+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ClutterAdditions.h"; path = "Clutter/NSObject+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ClutterAdditions.m"; path = "Clutter/NSObject+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E5D801159E820900D233F3 /* TestUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUISegmentedControl.m; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 				97E5D86A159EE68900D233F3 /* UIImage+ClutterAdditions.h */,
 				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
+				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
 				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
 				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
 				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
@@ -167,6 +171,7 @@
 				97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */,
 				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
 				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
+				97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */,
 			);
 			name = Clutter;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				977CA88715C0A8CE009376AD /* UISearchBar+ClutterAdditions.m in Sources */,
 				977CA88815C0A8CE009376AD /* UISegmentedControl+ClutterAdditions.m in Sources */,
 				9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */,
+				97C519C015F9399600424734 /* UITableViewCell+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
