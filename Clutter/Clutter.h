@@ -39,6 +39,9 @@ extern "C" {
 #import "UIImage+ClutterAdditions.h"
 #import "UISearchBar+ClutterAdditions.h"
 #import "UISegmentedControl+ClutterAdditions.h"
+#import "UITableViewCell+ClutterAdditions.h"
+
+#import "CLElasticSlider.h"
 #endif // __OBJC__
 
 #if defined(__cplusplus)
