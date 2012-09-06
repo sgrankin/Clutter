@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source   = {git:'git:clutter.git', commit:'HEAD'}
   s.description = 'An unsorted assortment useful classes and additions.'
 
-  s.source_files = 'Clutter/**/*.{h,m,mm,c,cpp}'
+  s.source_files = 'Clutter'
   # s.header_mappings_dir = 'Clutter' # preserve the header directory layout
   # s.resources = "icon.png"
   # s.preserve_paths = 'moreinfo.txt'
