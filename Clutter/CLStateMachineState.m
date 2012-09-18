@@ -40,11 +40,11 @@
     return self;
 }
 
-- (void)willTransitionToState:(CLStateMachineState *)state
+- (void)willTransitionToState:(CLStateMachineState *)newState
 {
 }
 
-- (void)didTransitionFromState:(CLStateMachineState *)state
+- (void)didTransitionFromState:(CLStateMachineState *)originalState
 {
 }
 @end

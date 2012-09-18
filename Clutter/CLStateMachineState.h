@@ -24,10 +24,16 @@
 @class CLStateMachine;
 
 @interface CLStateMachineState : NSObject
+/// Create a state with the given CLStateMachine.
+/// This is the designated initializer.
 - (id)initWithStateMachine:(CLStateMachine *)sm;
 
-- (void)willTransitionToState:(CLStateMachineState *)state;
-- (void)didTransitionFromState:(CLStateMachineState *)state;
+/// Called by CLStateMachine/-transitionToState: before changing CLStateMachine/-currentState.
+- (void)willTransitionToState:(CLStateMachineState *)newState;
 
+/// Called by CLStateMachine/-transitionToState: after changing CLStateMachine/-currentState.
+- (void)didTransitionFromState:(CLStateMachineState *)originalState;
+
+/// The state machine that owns this state.
 @property (readonly) CLStateMachine *stateMachine;
 @end

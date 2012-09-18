@@ -26,6 +26,7 @@
 
 @interface CLStateMachine ()
 @property NSDictionary *statesByClass;
+@property CLStateMachineState *currentState;
 @end
 
 @implementation CLStateMachine
@@ -62,11 +63,11 @@
 - (void)transitionToState:(Class)state
 {
     NSLog(@"%@ currentState:%@->%@", self.class, self.currentState.class, state);
-    CLStateMachineState *oldState = self.currentState;
-    CLStateMachineState *nextState = self.statesByClass[state];
-    [self.currentState willTransitionToState:nextState];
-    self.currentState = self.statesByClass[state];
-    [self.currentState didTransitionFromState:oldState];
+    CLStateMachineState *originalState = self.currentState;
+    CLStateMachineState *newState = self.statesByClass[state];
+    [self.currentState willTransitionToState:newState];
+    self.currentState = newState;
+    [self.currentState didTransitionFromState:originalState];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
@@ -85,5 +86,3 @@
         [super forwardInvocation:anInvocation];
 }
 @end
-
-

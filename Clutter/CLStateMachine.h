@@ -23,14 +23,22 @@
 
 #import "CLStateMachineState.h"
 
+/// A CLStateMachine is a container of states and a manager of transitions between them.
+/// Any unknown methods called on CLStateMachine will be forwarded to its current state.
 @interface CLStateMachine : NSObject
+
+/// Create state machine with a list of states.
+/// A state is a Class deriving from CLStateMachineState. The first state specified will be the initial state.
+/// This is the designated initializer.
 - (id)initWithStates:(NSArray *)states;
 
+/// Initialize a CLStateMachineState. Default implementation will call CLStateMachineState/-initWithStateMachine:
 - (CLStateMachineState *)stateForStateClass:(Class)class;
+
+/// Transition the state machine to the new state.
 - (void)transitionToState:(Class)state;
 
-@property CLStateMachineState *currentState;
+/// The current state.
+@property (readonly) CLStateMachineState *currentState;
 @end
-
-
 
