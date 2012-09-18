@@ -41,6 +41,7 @@
 		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E604B316093087002898CD /* CLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B116093086002898CD /* CLStateMachine.m */; };
 		97E604B416093087002898CD /* CLStateMachineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B216093086002898CD /* CLStateMachineState.m */; };
+		97E604C4160933B6002898CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E604C3160933B6002898CD /* Default-568h@2x.png */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ClutterAdditions.m"; path = "Clutter/UIImage+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E604B116093086002898CD /* CLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachine.m; path = Clutter/CLStateMachine.m; sourceTree = "<group>"; };
 		97E604B216093086002898CD /* CLStateMachineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachineState.m; path = Clutter/CLStateMachineState.m; sourceTree = "<group>"; };
+		97E604C3160933B6002898CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 		9710F37C15784F6400BA3FDC = {
 			isa = PBXGroup;
 			children = (
+				97E604C3160933B6002898CD /* Default-568h@2x.png */,
 				9710F3891578507900BA3FDC /* Clutter */,
 				97BAE23B15785AAD00449601 /* ClutterTests */,
 				97E5D823159E88B100D233F3 /* ClutterApp */,
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */,
+				97E604C4160933B6002898CD /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

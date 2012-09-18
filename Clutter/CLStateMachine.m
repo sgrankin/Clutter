@@ -41,7 +41,10 @@
     if (self = [super init]) {
         NSMutableDictionary *statesByClass = [NSMutableDictionary dictionary];
         for (Class c in states) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
             statesByClass[c] = [self stateForStateClass:c];
+#pragma clang diagnostic pop
         }
         self.statesByClass = statesByClass;
         self.currentState = self.statesByClass[states.firstObject];
