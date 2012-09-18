@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.prefix_header_contents = '#import "Clutter.h"'
   s.ios.frameworks = 'Foundation', 'UIKit', 'CoreData'
+  s.ios.deployment_target = '5.0'
   s.osx.frameworks = 'Foundation', 'CoreData'
   # s.libraries = 'objc'
 
