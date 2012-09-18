@@ -162,36 +162,10 @@
 		9710F3891578507900BA3FDC /* Clutter */ = {
 			isa = PBXGroup;
 			children = (
-				971CFD6A15F9525000883B52 /* CLElasticSlider.h */,
-				972674D71607FE8B0004003E /* CLStateMachine.h */,
-				972674DB1608048B0004003E /* CLStateMachineState.h */,
 				9710F38515784F7B00BA3FDC /* Clutter.h */,
 				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
-				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
-				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
-				97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */,
-				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
-				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
-				97E5D842159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.h */,
-				9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */,
-				97E5D86A159EE68900D233F3 /* UIImage+ClutterAdditions.h */,
-				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
-				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
-				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
-				971CFD6B15F9525000883B52 /* CLElasticSlider.m */,
-				97E604B116093086002898CD /* CLStateMachine.m */,
-				97E604B216093086002898CD /* CLStateMachineState.m */,
-				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
-				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
-				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
-				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
-				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
-				97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */,
-				9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */,
-				97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */,
-				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
-				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
-				97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */,
+				97E604C61609343F002898CD /* Categories */,
+				97E604C716093459002898CD /* Classes */,
 			);
 			name = Clutter;
 			sourceTree = "<group>";
@@ -267,6 +241,48 @@
 				97E5D82B159E88B100D233F3 /* ClutterApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97E604C61609343F002898CD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
+				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
+				97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */,
+				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
+				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
+				97E5D842159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.h */,
+				9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */,
+				97E5D86A159EE68900D233F3 /* UIImage+ClutterAdditions.h */,
+				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
+				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
+				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
+				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
+				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
+				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
+				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
+				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
+				97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */,
+				9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */,
+				97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */,
+				97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */,
+				9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */,
+				97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		97E604C716093459002898CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				971CFD6A15F9525000883B52 /* CLElasticSlider.h */,
+				972674D71607FE8B0004003E /* CLStateMachine.h */,
+				972674DB1608048B0004003E /* CLStateMachineState.h */,
+				971CFD6B15F9525000883B52 /* CLElasticSlider.m */,
+				97E604B116093086002898CD /* CLStateMachine.m */,
+				97E604B216093086002898CD /* CLStateMachineState.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
