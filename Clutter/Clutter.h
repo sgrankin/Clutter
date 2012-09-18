@@ -42,6 +42,7 @@ extern "C" {
 #import "UITableViewCell+ClutterAdditions.h"
 
 #import "CLElasticSlider.h"
+#import "CLStateMachine.h"
 #endif // __OBJC__
 
 #if defined(__cplusplus)
