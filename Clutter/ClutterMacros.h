@@ -24,6 +24,6 @@
 
 #pragma mark - math
 
-#define CLAMP(a,x,b) MAX((a), MIN((b), (x)))
+#define CLAMP(x, min, max) MAX((min), MIN((max), (x)))
 
 #endif
