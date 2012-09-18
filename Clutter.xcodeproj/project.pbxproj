@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		971CFD6C15F9525000883B52 /* CLElasticSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 971CFD6B15F9525000883B52 /* CLElasticSlider.m */; };
-		972674D91607FE8B0004003E /* CLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674D81607FE8B0004003E /* CLStateMachine.m */; };
-		972674DD1608048B0004003E /* CLStateMachineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674DC1608048B0004003E /* CLStateMachineState.m */; };
 		972674DF160806EA0004003E /* TestCLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674DE160806EA0004003E /* TestCLStateMachine.m */; };
 		9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9728F4C015BF7DE600849A6E /* libobjc.dylib */; };
 		972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */; };
@@ -41,6 +39,8 @@
 		97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* TestNSArray.m */; };
 		97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
+		97E604B316093087002898CD /* CLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B116093086002898CD /* CLStateMachine.m */; };
+		97E604B416093087002898CD /* CLStateMachineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B216093086002898CD /* CLStateMachineState.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +65,7 @@
 		971CFD6A15F9525000883B52 /* CLElasticSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLElasticSlider.h; path = Clutter/CLElasticSlider.h; sourceTree = "<group>"; };
 		971CFD6B15F9525000883B52 /* CLElasticSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLElasticSlider.m; path = Clutter/CLElasticSlider.m; sourceTree = "<group>"; };
 		972674D71607FE8B0004003E /* CLStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLStateMachine.h; path = Clutter/CLStateMachine.h; sourceTree = "<group>"; };
-		972674D81607FE8B0004003E /* CLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachine.m; path = Clutter/CLStateMachine.m; sourceTree = "<group>"; };
 		972674DB1608048B0004003E /* CLStateMachineState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLStateMachineState.h; path = Clutter/CLStateMachineState.h; sourceTree = "<group>"; };
-		972674DC1608048B0004003E /* CLStateMachineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachineState.m; path = Clutter/CLStateMachineState.m; sourceTree = "<group>"; };
 		972674DE160806EA0004003E /* TestCLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCLStateMachine.m; sourceTree = "<group>"; };
 		9728F4C015BF7DE600849A6E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libobjc.dylib; sourceTree = DEVELOPER_DIR; };
 		972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSObject.m; sourceTree = "<group>"; };
@@ -115,6 +113,8 @@
 		97E5D867159EE5D700D233F3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		97E5D86A159EE68900D233F3 /* UIImage+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ClutterAdditions.h"; path = "Clutter/UIImage+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ClutterAdditions.m"; path = "Clutter/UIImage+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97E604B116093086002898CD /* CLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachine.m; path = Clutter/CLStateMachine.m; sourceTree = "<group>"; };
+		97E604B216093086002898CD /* CLStateMachineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachineState.m; path = Clutter/CLStateMachineState.m; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,8 +176,8 @@
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
 				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
 				971CFD6B15F9525000883B52 /* CLElasticSlider.m */,
-				972674D81607FE8B0004003E /* CLStateMachine.m */,
-				972674DC1608048B0004003E /* CLStateMachineState.m */,
+				97E604B116093086002898CD /* CLStateMachine.m */,
+				97E604B216093086002898CD /* CLStateMachineState.m */,
 				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
 				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
 				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
@@ -433,8 +433,8 @@
 				9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */,
 				97C519C015F9399600424734 /* UITableViewCell+ClutterAdditions.m in Sources */,
 				971CFD6C15F9525000883B52 /* CLElasticSlider.m in Sources */,
-				972674D91607FE8B0004003E /* CLStateMachine.m in Sources */,
-				972674DD1608048B0004003E /* CLStateMachineState.m in Sources */,
+				97E604B316093087002898CD /* CLStateMachine.m in Sources */,
+				97E604B416093087002898CD /* CLStateMachineState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -480,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
