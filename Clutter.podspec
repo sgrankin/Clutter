@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Miscelaneous iOS/Mac classes and additions.'
   s.homepage = 'http://www.thunderbunny.net/gitweb/Clutter.git'
   s.author   = {'Sergey Grankin' => 'sagran@gmail.com' }
-  s.source   = {git:'git:clutter.git', commit:'HEAD'}
+  s.source   = {git:'git:surge/clutter.git', commit:'HEAD'}
   s.description = 'An unsorted assortment useful classes and additions.'
 
   s.source_files = 'Clutter'
