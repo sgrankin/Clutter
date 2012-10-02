@@ -1,4 +1,4 @@
-# XCode 'Workspace Settings'
-contents.xcworkspacedata
+# XCode workspace settings
 xcuserdata/
-Info.plist.h
+
+/Info.plist.h
