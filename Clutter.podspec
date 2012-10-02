@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Clutter'
   # s.header_mappings_dir = 'Clutter' # preserve the header directory layout
+  s.preserve_paths = 'Specs'
   # s.resources = "icon.png"
-  # s.preserve_paths = 'moreinfo.txt'
 
   s.requires_arc = true
 
