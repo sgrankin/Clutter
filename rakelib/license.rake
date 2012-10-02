@@ -1,7 +1,8 @@
-def license
-  raise 'Must set SOURCES to specify which files to update with LICENSE' if !SOURCES
+def update_license
+  fail 'Must set SOURCES to specify which files to update with LICENSE' unless SOURCES
 
   license = open('LICENSE') do |io|
+    # strip all trailing spaces, make into a comment
     io.lines.map {|line| ('// ' + line).rstrip + $/}
   end
 
@@ -23,11 +24,10 @@ end
 
 desc 'Update headers in all files to match the LICENSE'
 task :license do
-  license
+  update_license
 end
 
 task :license_fail_on_update do
-  fail if license # fail the commit if there were updates to any files
+  # fail the commit if there were updates to any files; we're too dumb to resolve this
+  fail "Files updated with LICENSE" if update_license
 end
-
-task 'githooks:precommit' => [:license_fail_on_update]

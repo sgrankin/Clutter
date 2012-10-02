@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		978DD143161AB7DF0046D0C1 /* Prebuild */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 978DD144161AB7DF0046D0C1 /* Build configuration list for PBXAggregateTarget "Prebuild" */;
+			buildPhases = (
+				978DD147161AB7EB0046D0C1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Prebuild;
+			productName = Prebuild;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		971CFD6C15F9525000883B52 /* CLElasticSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 971CFD6B15F9525000883B52 /* CLElasticSlider.m */; };
 		972674DF160806EA0004003E /* CLStateMachine_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674DE160806EA0004003E /* CLStateMachine_specs.m */; };
@@ -56,6 +70,20 @@
 			remoteGlobalIDString = 97E5D81C159E88B100D233F3;
 			remoteInfo = ClutterApp;
 		};
+		978DD148161AB7F40046D0C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9710F37E15784F6400BA3FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 978DD143161AB7DF0046D0C1;
+			remoteInfo = Prebuild;
+		};
+		978DD14A161AB7F70046D0C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9710F37E15784F6400BA3FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 978DD143161AB7DF0046D0C1;
+			remoteInfo = Prebuild;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +108,7 @@
 		978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cl_error_catcher.mm; path = Clutter/cl_error_catcher.mm; sourceTree = "<group>"; };
 		978DD0EC161A5EC80046D0C1 /* cl_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cl_error.h; path = Clutter/cl_error.h; sourceTree = "<group>"; };
 		978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cl_error_tests.mm; sourceTree = "<group>"; };
+		978DD0F0161A69490046D0C1 /* Clutter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clutter.podspec; sourceTree = "<group>"; };
 		9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ClutterAdditions.h"; path = "Clutter/UIApplication+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ClutterAdditions.m"; path = "Clutter/UIApplication+ClutterAdditions.m"; sourceTree = "<group>"; };
 		9797693315C385A800440B43 /* UIApplication_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_specs.m; sourceTree = "<group>"; };
@@ -156,13 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				97E604C3160933B6002898CD /* Default-568h@2x.png */,
+				978DD0F0161A69490046D0C1 /* Clutter.podspec */,
+				3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */,
+				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
 				9710F3891578507900BA3FDC /* Clutter */,
-				97BAE23B15785AAD00449601 /* Specs */,
 				97E5D823159E88B100D233F3 /* ClutterApp */,
 				97BAE23415785AAD00449601 /* Frameworks */,
 				97BAE23315785AAD00449601 /* Products */,
-				09FC2F1879B748518CC2CD12 /* Pods.xcconfig */,
-				3F3CA5434F8442CBBB929C68 /* Pods-ClutterTests.xcconfig */,
+				97BAE23B15785AAD00449601 /* Specs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +343,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				978DD14B161AB7F70046D0C1 /* PBXTargetDependency */,
 				977CA87F15C0A8C7009376AD /* PBXTargetDependency */,
 			);
 			name = ClutterTests;
@@ -331,6 +362,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				978DD149161AB7F40046D0C1 /* PBXTargetDependency */,
 			);
 			name = ClutterApp;
 			productName = ClutterApp;
@@ -358,6 +390,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				978DD143161AB7DF0046D0C1 /* Prebuild */,
 				97E5D81C159E88B100D233F3 /* ClutterApp */,
 				97BAE23115785AAD00449601 /* ClutterTests */,
 			);
@@ -399,6 +432,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-ClutterTests-resources.sh\"\n";
+		};
+		978DD147161AB7EB0046D0C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rake prebuild";
 		};
 		97BAE23015785AAD00449601 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -480,6 +526,16 @@
 			target = 97E5D81C159E88B100D233F3 /* ClutterApp */;
 			targetProxy = 977CA87E15C0A8C7009376AD /* PBXContainerItemProxy */;
 		};
+		978DD149161AB7F40046D0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 978DD143161AB7DF0046D0C1 /* Prebuild */;
+			targetProxy = 978DD148161AB7F40046D0C1 /* PBXContainerItemProxy */;
+		};
+		978DD14B161AB7F70046D0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 978DD143161AB7DF0046D0C1 /* Prebuild */;
+			targetProxy = 978DD14A161AB7F70046D0C1 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -509,7 +565,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_PREFIX_HEADER = Info.plist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -520,7 +579,24 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_PREFIX_HEADER = Info.plist.h;
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		978DD145161AB7DF0046D0C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		978DD146161AB7DF0046D0C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -669,6 +745,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		978DD144161AB7DF0046D0C1 /* Build configuration list for PBXAggregateTarget "Prebuild" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				978DD145161AB7DF0046D0C1 /* Debug */,
+				978DD146161AB7DF0046D0C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		97BAE24715785AAD00449601 /* Build configuration list for PBXNativeTarget "ClutterTests" */ = {
 			isa = XCConfigurationList;
