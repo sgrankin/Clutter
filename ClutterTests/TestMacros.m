@@ -17,4 +17,26 @@ describe(@"CLAMP", ^{
     });
 });
 
+describe(@"COUNT", ^{
+    it(@"works", ^{
+        [[@(COUNT()) should] equal:@0];
+        [[@(COUNT(a)) should] equal:@1];
+        [[@(COUNT(a,b)) should] equal:@2];
+    });
+});
+
+#define dispatch2(a,b) 2
+#define dispatch1(a) 1
+#define dispatch0() 0
+#define dispatch(...) DISPATCH(dispatch, ##__VA_ARGS__)
+
+describe(@"DISPATCH", ^{
+    it(@"works", ^{
+        [[@(dispatch()) should] equal:@0];
+        [[@(dispatch(a)) should] equal:@1];
+        [[@(dispatch(a,b)) should] equal:@2];
+    });
+});
+
+
 SPEC_END
