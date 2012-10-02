@@ -33,7 +33,7 @@
 - (id)initWithStates:(NSArray *)states;
 
 /// Initialize a CLStateMachineState. Default implementation will call CLStateMachineState/-initWithStateMachine:
-- (CLStateMachineState *)stateForStateClass:(Class)class;
+- (CLStateMachineState *)stateForStateClass:(Class)klass;
 
 /// Transition the state machine to the new state.
 - (void)transitionToState:(Class)state;
