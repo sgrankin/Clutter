@@ -53,6 +53,7 @@
     // snap back to center
     [super endTrackingWithTouch:touch withEvent:event];
     self.value = 0.0;
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 @end
