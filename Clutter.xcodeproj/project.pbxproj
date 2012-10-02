@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		971CFD6C15F9525000883B52 /* CLElasticSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 971CFD6B15F9525000883B52 /* CLElasticSlider.m */; };
-		972674DF160806EA0004003E /* TestCLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674DE160806EA0004003E /* TestCLStateMachine.m */; };
+		972674DF160806EA0004003E /* CLStateMachine_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 972674DE160806EA0004003E /* CLStateMachine_specs.m */; };
 		9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9728F4C015BF7DE600849A6E /* libobjc.dylib */; };
-		972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */; };
+		972D4A8C15BF74AC006B8AD9 /* NSObject_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 972D4A8B15BF74AC006B8AD9 /* NSObject_specs.m */; };
 		977CA87C15C0A819009376AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977CA87715C0A79A009376AD /* UIKit.framework */; };
 		977CA87D15C0A851009376AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977CA87715C0A79A009376AD /* UIKit.framework */; };
 		977CA88015C0A8CE009376AD /* NSArray+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */; };
@@ -26,20 +26,20 @@
 		978DD0ED161A5EC80046D0C1 /* cl_error.h in Resources */ = {isa = PBXBuildFile; fileRef = 978DD0EC161A5EC80046D0C1 /* cl_error.h */; };
 		978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */; };
 		9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */; };
-		9797693415C385A800440B43 /* TestUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693315C385A800440B43 /* TestUIApplication.m */; };
-		97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* TestMacros.m */; };
+		9797693415C385A800440B43 /* UIApplication_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693315C385A800440B43 /* UIApplication_specs.m */; };
+		97A74F9F15792FAE00C093EF /* CLutterMacros_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */; };
 		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
-		97BAE25615785CCD00449601 /* TestClutter.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* TestClutter.m */; };
+		97BAE25615785CCD00449601 /* Clutter_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* Clutter_specs.m */; };
 		97C519C015F9399600424734 /* UITableViewCell+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */; };
-		97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* TestUISegmentedControl.m */; };
+		97E5D802159E820900D233F3 /* UISegmentedControl_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* UISegmentedControl_specs.m */; };
 		97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D826159E88B100D233F3 /* InfoPlist.strings */; };
 		97E5D82A159E88B100D233F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D829159E88B100D233F3 /* main.m */; };
 		97E5D82E159E88B100D233F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D82D159E88B100D233F3 /* AppDelegate.m */; };
-		97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83A159EC81E00D233F3 /* TestNSString.m */; };
-		97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D840159ED0E000D233F3 /* TestNSURL.m */; };
-		97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */; };
-		97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* TestNSArray.m */; };
+		97E5D83B159EC81E00D233F3 /* NSString_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D83A159EC81E00D233F3 /* NSString_specs.m */; };
+		97E5D841159ED0E000D233F3 /* NSURL_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D840159ED0E000D233F3 /* NSURL_specs.m */; };
+		97E5D847159ED44C00D233F3 /* NSURLRequest_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D846159ED44C00D233F3 /* NSURLRequest_specs.m */; };
+		97E5D84D159EDD3800D233F3 /* NSArray_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D84C159EDD3800D233F3 /* NSArray_specs.m */; };
 		97E5D868159EE5D700D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E5D867159EE5D700D233F3 /* CoreData.framework */; };
 		97E604B316093087002898CD /* CLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B116093086002898CD /* CLStateMachine.m */; };
@@ -70,9 +70,9 @@
 		971CFD6B15F9525000883B52 /* CLElasticSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLElasticSlider.m; path = Clutter/CLElasticSlider.m; sourceTree = "<group>"; };
 		972674D71607FE8B0004003E /* CLStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLStateMachine.h; path = Clutter/CLStateMachine.h; sourceTree = "<group>"; };
 		972674DB1608048B0004003E /* CLStateMachineState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLStateMachineState.h; path = Clutter/CLStateMachineState.h; sourceTree = "<group>"; };
-		972674DE160806EA0004003E /* TestCLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCLStateMachine.m; sourceTree = "<group>"; };
+		972674DE160806EA0004003E /* CLStateMachine_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLStateMachine_specs.m; sourceTree = "<group>"; };
 		9728F4C015BF7DE600849A6E /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/usr/lib/libobjc.dylib; sourceTree = DEVELOPER_DIR; };
-		972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSObject.m; sourceTree = "<group>"; };
+		972D4A8B15BF74AC006B8AD9 /* NSObject_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_specs.m; sourceTree = "<group>"; };
 		977CA87515C0A796009376AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		977CA87715C0A79A009376AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		977CA87915C0A7A1009376AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,19 +82,19 @@
 		978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cl_error_tests.mm; sourceTree = "<group>"; };
 		9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ClutterAdditions.h"; path = "Clutter/UIApplication+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ClutterAdditions.m"; path = "Clutter/UIApplication+ClutterAdditions.m"; sourceTree = "<group>"; };
-		9797693315C385A800440B43 /* TestUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIApplication.m; sourceTree = "<group>"; };
-		97A74F9E15792FAE00C093EF /* TestMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMacros.m; sourceTree = "<group>"; };
+		9797693315C385A800440B43 /* UIApplication_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_specs.m; sourceTree = "<group>"; };
+		97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLutterMacros_specs.m; sourceTree = "<group>"; };
 		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterTests-Info.plist"; sourceTree = "<group>"; };
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
-		97BAE25515785CCD00449601 /* TestClutter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClutter.m; sourceTree = "<group>"; };
+		97BAE25515785CCD00449601 /* Clutter_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clutter_specs.m; sourceTree = "<group>"; };
 		97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+ClutterAdditions.h"; path = "Clutter/UITableViewCell+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+ClutterAdditions.m"; path = "Clutter/UITableViewCell+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ClutterAdditions.h"; path = "Clutter/NSObject+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+ClutterAdditions.m"; path = "Clutter/NSObject+ClutterAdditions.m"; sourceTree = "<group>"; };
-		97E5D801159E820900D233F3 /* TestUISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUISegmentedControl.m; sourceTree = "<group>"; };
+		97E5D801159E820900D233F3 /* UISegmentedControl_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControl_specs.m; sourceTree = "<group>"; };
 		97E5D81D159E88B100D233F3 /* ClutterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClutterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E5D825159E88B100D233F3 /* ClutterApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterApp-Info.plist"; sourceTree = "<group>"; };
 		97E5D827159E88B100D233F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,16 +104,16 @@
 		97E5D82D159E88B100D233F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ClutterAdditions.h"; path = "Clutter/NSString+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ClutterAdditions.m"; path = "Clutter/NSString+ClutterAdditions.m"; sourceTree = "<group>"; };
-		97E5D83A159EC81E00D233F3 /* TestNSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSString.m; sourceTree = "<group>"; };
+		97E5D83A159EC81E00D233F3 /* NSString_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_specs.m; sourceTree = "<group>"; };
 		97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+ClutterAdditions.h"; path = "Clutter/NSURL+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+ClutterAdditions.m"; path = "Clutter/NSURL+ClutterAdditions.m"; sourceTree = "<group>"; };
-		97E5D840159ED0E000D233F3 /* TestNSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSURL.m; sourceTree = "<group>"; };
+		97E5D840159ED0E000D233F3 /* NSURL_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURL_specs.m; sourceTree = "<group>"; };
 		97E5D842159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+ClutterAdditions.h"; path = "Clutter/NSURLRequest+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D843159ED43A00D233F3 /* NSURLRequest+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+ClutterAdditions.m"; path = "Clutter/NSURLRequest+ClutterAdditions.m"; sourceTree = "<group>"; };
-		97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSURLRequest.m; sourceTree = "<group>"; };
+		97E5D846159ED44C00D233F3 /* NSURLRequest_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequest_specs.m; sourceTree = "<group>"; };
 		97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+ClutterAdditions.h"; path = "Clutter/NSArray+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ClutterAdditions.m"; path = "Clutter/NSArray+ClutterAdditions.m"; sourceTree = "<group>"; };
-		97E5D84C159EDD3800D233F3 /* TestNSArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSArray.m; sourceTree = "<group>"; };
+		97E5D84C159EDD3800D233F3 /* NSArray_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_specs.m; sourceTree = "<group>"; };
 		97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchedResultsController+ClutterAdditions.h"; path = "Clutter/NSFetchedResultsController+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchedResultsController+ClutterAdditions.m"; path = "Clutter/NSFetchedResultsController+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+ClutterAdditions.h"; path = "Clutter/UISearchBar+ClutterAdditions.h"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			children = (
 				97E604C3160933B6002898CD /* Default-568h@2x.png */,
 				9710F3891578507900BA3FDC /* Clutter */,
-				97BAE23B15785AAD00449601 /* ClutterTests */,
+				97BAE23B15785AAD00449601 /* Specs */,
 				97E5D823159E88B100D233F3 /* ClutterApp */,
 				97BAE23415785AAD00449601 /* Frameworks */,
 				97BAE23315785AAD00449601 /* Products */,
@@ -204,23 +204,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		97BAE23B15785AAD00449601 /* ClutterTests */ = {
+		97BAE23B15785AAD00449601 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				972674DE160806EA0004003E /* TestCLStateMachine.m */,
-				97BAE25515785CCD00449601 /* TestClutter.m */,
-				97A74F9E15792FAE00C093EF /* TestMacros.m */,
-				97E5D84C159EDD3800D233F3 /* TestNSArray.m */,
-				972D4A8B15BF74AC006B8AD9 /* TestNSObject.m */,
-				97E5D83A159EC81E00D233F3 /* TestNSString.m */,
-				97E5D840159ED0E000D233F3 /* TestNSURL.m */,
-				97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */,
-				9797693315C385A800440B43 /* TestUIApplication.m */,
-				97E5D801159E820900D233F3 /* TestUISegmentedControl.m */,
+				972674DE160806EA0004003E /* CLStateMachine_specs.m */,
+				97BAE25515785CCD00449601 /* Clutter_specs.m */,
+				97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */,
+				97E5D84C159EDD3800D233F3 /* NSArray_specs.m */,
+				972D4A8B15BF74AC006B8AD9 /* NSObject_specs.m */,
+				97E5D83A159EC81E00D233F3 /* NSString_specs.m */,
+				97E5D840159ED0E000D233F3 /* NSURL_specs.m */,
+				97E5D846159ED44C00D233F3 /* NSURLRequest_specs.m */,
+				9797693315C385A800440B43 /* UIApplication_specs.m */,
+				97E5D801159E820900D233F3 /* UISegmentedControl_specs.m */,
 				978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */,
 				97BAE23C15785AAD00449601 /* Supporting Files */,
 			);
-			path = ClutterTests;
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		97BAE23C15785AAD00449601 /* Supporting Files */ = {
@@ -434,16 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BAE25615785CCD00449601 /* TestClutter.m in Sources */,
-				97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */,
-				97E5D802159E820900D233F3 /* TestUISegmentedControl.m in Sources */,
-				97E5D83B159EC81E00D233F3 /* TestNSString.m in Sources */,
-				97E5D841159ED0E000D233F3 /* TestNSURL.m in Sources */,
-				97E5D847159ED44C00D233F3 /* TestNSURLRequest.m in Sources */,
-				97E5D84D159EDD3800D233F3 /* TestNSArray.m in Sources */,
-				972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */,
-				9797693415C385A800440B43 /* TestUIApplication.m in Sources */,
-				972674DF160806EA0004003E /* TestCLStateMachine.m in Sources */,
+				97BAE25615785CCD00449601 /* Clutter_specs.m in Sources */,
+				97A74F9F15792FAE00C093EF /* CLutterMacros_specs.m in Sources */,
+				97E5D802159E820900D233F3 /* UISegmentedControl_specs.m in Sources */,
+				97E5D83B159EC81E00D233F3 /* NSString_specs.m in Sources */,
+				97E5D841159ED0E000D233F3 /* NSURL_specs.m in Sources */,
+				97E5D847159ED44C00D233F3 /* NSURLRequest_specs.m in Sources */,
+				97E5D84D159EDD3800D233F3 /* NSArray_specs.m in Sources */,
+				972D4A8C15BF74AC006B8AD9 /* NSObject_specs.m in Sources */,
+				9797693415C385A800440B43 /* UIApplication_specs.m in Sources */,
+				972674DF160806EA0004003E /* CLStateMachine_specs.m in Sources */,
 				978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,7 +542,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ClutterTests/ClutterTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Specs/ClutterTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -552,7 +552,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "ClutterTests/ClutterTests-Info.plist";
+				INFOPLIST_FILE = "Specs/ClutterTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -578,12 +578,12 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ClutterTests/ClutterTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Specs/ClutterTests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "ClutterTests/ClutterTests-Info.plist";
+				INFOPLIST_FILE = "Specs/ClutterTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
