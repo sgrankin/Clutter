@@ -15,3 +15,5 @@ task :precommit => [:license_fail_on_update]
 
 desc "Xcode prebuild script"
 task :prebuild => [:make_info_plist, :make_images]
+
+file 'README.html' => ['README.md']
