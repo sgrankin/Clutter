@@ -6,19 +6,10 @@ def set_version version
   sh %{#{AGVTOOL} new-marketing-version #{version} > /dev/null}
 
   podspec = FileList['*.podspec'].first
-  tmp = podspec + '~'
-
-  open(tmp, 'w') do |fout|
-    open(podspec) do |fin|
-      fin.each_line do |l|
-        fout << l.gsub(/(?<pre>version.*=\s*')((\d|\.)+)(?<post>.*)/) do
-          m = $~
-          m[:pre] + get_version[1..-1] + m[:post]
-        end
-      end
-    end
+  if podspec
+    sh %{sed -i~ -e "/^POD_VERSION\s*=/s/'.*'/'#{version}'/" #{podspec}}
+    File.delete(podspec + '~')
   end
-  mv tmp, podspec
 end
 
 # version string to array
