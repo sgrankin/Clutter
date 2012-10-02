@@ -1,5 +1,6 @@
 # encoding: UTF-8
-require 'prettyprint'
+require 'bundler'
+Bundler.setup
 
 SOURCES = FileList['{Clutter,Specs}/**/*.{h,hpp,m,mm,c,cpp}']
 
