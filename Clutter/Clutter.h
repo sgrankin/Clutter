@@ -22,11 +22,14 @@
 #ifndef Clutter_Clutter_h
 #define Clutter_Clutter_h
 
+#import "ClutterMacros.h"
+
+#include "cl_error.h"
+
 #if defined(__cplusplus)
+// c-only code needs an extern "C" declaration so that c++ calls will match.
 extern "C" {
 #endif
-
-#import "ClutterMacros.h"
 
 #ifdef __OBJC__
 #import "NSArray+ClutterAdditions.h"
@@ -43,6 +46,7 @@ extern "C" {
 
 #import "CLElasticSlider.h"
 #import "CLStateMachine.h"
+    
 #endif // __OBJC__
 
 #if defined(__cplusplus)

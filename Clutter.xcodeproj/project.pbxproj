@@ -22,6 +22,9 @@
 		977CA88615C0A8CE009376AD /* UIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D86B159EE68900D233F3 /* UIImage+ClutterAdditions.m */; };
 		977CA88715C0A8CE009376AD /* UISearchBar+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D860159EE2F900D233F3 /* UISearchBar+ClutterAdditions.m */; };
 		977CA88815C0A8CE009376AD /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
+		978DD0EA161A5B340046D0C1 /* cl_error_catcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */; };
+		978DD0ED161A5EC80046D0C1 /* cl_error.h in Resources */ = {isa = PBXBuildFile; fileRef = 978DD0EC161A5EC80046D0C1 /* cl_error.h */; };
+		978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */; };
 		9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */; };
 		9797693415C385A800440B43 /* TestUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693315C385A800440B43 /* TestUIApplication.m */; };
 		97A74F9F15792FAE00C093EF /* TestMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* TestMacros.m */; };
@@ -73,6 +76,10 @@
 		977CA87515C0A796009376AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		977CA87715C0A79A009376AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		977CA87915C0A7A1009376AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		978DD0E8161A5A460046D0C1 /* cl_error_catcher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = cl_error_catcher.h; path = Clutter/cl_error_catcher.h; sourceTree = "<group>"; };
+		978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cl_error_catcher.mm; path = Clutter/cl_error_catcher.mm; sourceTree = "<group>"; };
+		978DD0EC161A5EC80046D0C1 /* cl_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cl_error.h; path = Clutter/cl_error.h; sourceTree = "<group>"; };
+		978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cl_error_tests.mm; sourceTree = "<group>"; };
 		9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ClutterAdditions.h"; path = "Clutter/UIApplication+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ClutterAdditions.m"; path = "Clutter/UIApplication+ClutterAdditions.m"; sourceTree = "<group>"; };
 		9797693315C385A800440B43 /* TestUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIApplication.m; sourceTree = "<group>"; };
@@ -162,8 +169,11 @@
 		9710F3891578507900BA3FDC /* Clutter */ = {
 			isa = PBXGroup;
 			children = (
+				978DD0EC161A5EC80046D0C1 /* cl_error.h */,
+				978DD0E8161A5A460046D0C1 /* cl_error_catcher.h */,
 				9710F38515784F7B00BA3FDC /* Clutter.h */,
 				9710F38A1578508C00BA3FDC /* ClutterMacros.h */,
+				978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */,
 				97E604C61609343F002898CD /* Categories */,
 				97E604C716093459002898CD /* Classes */,
 			);
@@ -207,6 +217,7 @@
 				97E5D846159ED44C00D233F3 /* TestNSURLRequest.m */,
 				9797693315C385A800440B43 /* TestUIApplication.m */,
 				97E5D801159E820900D233F3 /* TestUISegmentedControl.m */,
+				978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */,
 				97BAE23C15785AAD00449601 /* Supporting Files */,
 			);
 			path = ClutterTests;
@@ -359,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */,
+				978DD0ED161A5EC80046D0C1 /* cl_error.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +444,7 @@
 				972D4A8C15BF74AC006B8AD9 /* TestNSObject.m in Sources */,
 				9797693415C385A800440B43 /* TestUIApplication.m in Sources */,
 				972674DF160806EA0004003E /* TestCLStateMachine.m in Sources */,
+				978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +468,7 @@
 				971CFD6C15F9525000883B52 /* CLElasticSlider.m in Sources */,
 				97E604B316093087002898CD /* CLStateMachine.m in Sources */,
 				97E604B416093087002898CD /* CLStateMachineState.m in Sources */,
+				978DD0EA161A5B340046D0C1 /* cl_error_catcher.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +506,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
@@ -500,6 +517,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09FC2F1879B748518CC2CD12 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
