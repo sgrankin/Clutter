@@ -41,7 +41,7 @@
 		978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */; };
 		9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */; };
 		9797693415C385A800440B43 /* UIApplication_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693315C385A800440B43 /* UIApplication_specs.m */; };
-		97A74F9F15792FAE00C093EF /* CLutterMacros_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */; };
+		97A74F9F15792FAE00C093EF /* ClutterMacros_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* ClutterMacros_specs.m */; };
 		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
 		97BAE25615785CCD00449601 /* Clutter_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* Clutter_specs.m */; };
@@ -112,7 +112,7 @@
 		9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ClutterAdditions.h"; path = "Clutter/UIApplication+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ClutterAdditions.m"; path = "Clutter/UIApplication+ClutterAdditions.m"; sourceTree = "<group>"; };
 		9797693315C385A800440B43 /* UIApplication_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplication_specs.m; sourceTree = "<group>"; };
-		97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLutterMacros_specs.m; sourceTree = "<group>"; };
+		97A74F9E15792FAE00C093EF /* ClutterMacros_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClutterMacros_specs.m; sourceTree = "<group>"; };
 		97BAE23215785AAD00449601 /* ClutterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClutterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BAE23515785AAD00449601 /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		97BAE23D15785AAD00449601 /* ClutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClutterTests-Info.plist"; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			children = (
 				972674DE160806EA0004003E /* CLStateMachine_specs.m */,
 				97BAE25515785CCD00449601 /* Clutter_specs.m */,
-				97A74F9E15792FAE00C093EF /* CLutterMacros_specs.m */,
+				97A74F9E15792FAE00C093EF /* ClutterMacros_specs.m */,
 				97E5D84C159EDD3800D233F3 /* NSArray_specs.m */,
 				972D4A8B15BF74AC006B8AD9 /* NSObject_specs.m */,
 				97E5D83A159EC81E00D233F3 /* NSString_specs.m */,
@@ -481,7 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BAE25615785CCD00449601 /* Clutter_specs.m in Sources */,
-				97A74F9F15792FAE00C093EF /* CLutterMacros_specs.m in Sources */,
+				97A74F9F15792FAE00C093EF /* ClutterMacros_specs.m in Sources */,
 				97E5D802159E820900D233F3 /* UISegmentedControl_specs.m in Sources */,
 				97E5D83B159EC81E00D233F3 /* NSString_specs.m in Sources */,
 				97E5D841159ED0E000D233F3 /* NSURL_specs.m in Sources */,
@@ -753,6 +753,7 @@
 				978DD146161AB7DF0046D0C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97BAE24715785AAD00449601 /* Build configuration list for PBXNativeTarget "ClutterTests" */ = {
 			isa = XCConfigurationList;
