@@ -4,6 +4,21 @@ end
 
 def set_version version
   sh %{#{AGVTOOL} new-marketing-version #{version} > /dev/null}
+
+  podspec = FileList['*.podspec'].first
+  tmp = podspec + '~'
+
+  open(tmp, 'w') do |fout|
+    open(podspec) do |fin|
+      fin.each_line do |l|
+        fout << l.gsub(/(?<pre>version.*=\s*')((\d|\.)+)(?<post>.*)/) do
+          m = $~
+          m[:pre] + get_version[1..-1] + m[:post]
+        end
+      end
+    end
+  end
+  mv tmp, podspec
 end
 
 # version string to array
@@ -78,15 +93,15 @@ namespace :version do
     sh %{#{GIT} tag #{get_version}}
   end
 
-  task :commit_plists do |t|
-    `#{GIT} status --porcelain`.split($/).grep(/^ M .*plist/i).each do |l|
-      sh %{#{GIT} add "#{l[3..-1]}"}
+  task :commit_changes do |t|
+    FileList['*.podspec', '**/*-Info.plist'].each do |f|
+      sh %{#{GIT} add "#{f}"}
     end
     sh %{#{GIT} commit -m "Version #{get_version}"}
   end
 
   desc "Bump the patch version, commit changed plists, and tag"
-  task :bumptag => [:git_assert_clean, :bump, :commit_plists, :tag]
+  task :bumptag => [:git_assert_clean, :bump, :commit_changes, :tag]
 end
 desc 'Display the current version'
 task :version => ['version:show']
