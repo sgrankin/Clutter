@@ -45,4 +45,31 @@
         return predicate(evaluatedObject);
     }]];
 }
+
+- (NSArray *)sortedArrayWithKey:(NSString *)keyPath ascending:(BOOL)ascending
+{
+    return [self sortedArrayUsingDescriptors:@[[NSSortDescriptor
+                                                sortDescriptorWithKey:keyPath
+                                                ascending:ascending]]];
+}
+
+- (NSArray *)sortedArrayWithKey:(NSString *)keyPath
+                      ascending:(BOOL)ascending
+                     comparator:(NSComparator)comparator
+{
+    return [self sortedArrayUsingDescriptors:@[[NSSortDescriptor
+                                                sortDescriptorWithKey:keyPath
+                                                ascending:ascending
+                                                comparator:comparator]]];
+}
+
+- (NSArray *)sortedArrayWithKey:(NSString *)keyPath
+                      ascending:(BOOL)ascending
+                       selector:(SEL)selector
+{
+    return [self sortedArrayUsingDescriptors:@[[NSSortDescriptor
+                                                sortDescriptorWithKey:keyPath
+                                                ascending:ascending
+                                                selector:selector]]];
+}
 @end

@@ -45,6 +45,29 @@ describe(@"NSArray", ^{
             }] should] equal:@[@2, @4]];
         });
     });
+    
+    describe(@"sortedArrayWithKey", ^{
+       it(@"works", ^{
+           [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:NO] should] equal:@[@2, @10, @1]];
+           [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:YES] should] equal:@[@1, @10, @2]];
+
+       });
+        it(@"works withComparator", ^{
+            NSComparator c = ^(NSString *a, NSString *b) {
+                return [a compare:b];
+            };
+            [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:NO comparator:c] should] equal:@[@2, @10, @1]];
+            [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:YES comparator:c] should] equal:@[@1, @10, @2]];
+        });
+        it(@"works withSelector", ^{
+            SEL s = @selector(caseInsensitiveCompare:);
+            [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:NO selector:s] should] equal:@[@2, @10, @1]];
+            [[[@[@2, @1, @10] sortedArrayWithKey:@"stringValue" ascending:YES selector:s] should] equal:@[@1, @10, @2]];
+            
+            [[[@[@"aa", @"AB"] sortedArrayWithKey:@"copy" ascending:YES] should] equal:@[@"AB", @"aa"]];
+            [[[@[@"aa", @"AB"] sortedArrayWithKey:@"copy" ascending:YES selector:s] should] equal:@[@"aa", @"AB"]];
+        });
+    });
 });
 
 SPEC_END
