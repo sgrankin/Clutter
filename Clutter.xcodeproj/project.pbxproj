@@ -59,6 +59,8 @@
 		97E604B316093087002898CD /* CLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B116093086002898CD /* CLStateMachine.m */; };
 		97E604B416093087002898CD /* CLStateMachineState.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E604B216093086002898CD /* CLStateMachineState.m */; };
 		97E604C4160933B6002898CD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E604C3160933B6002898CD /* Default-568h@2x.png */; };
+		97FB435E161D217900783006 /* NSMutableDictionary+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FB435D161D217900783006 /* NSMutableDictionary+ClutterAdditions.m */; };
+		97FB4362161D230E00783006 /* NSMutableDictionary_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FB4360161D22F500783006 /* NSMutableDictionary_specs.m */; };
 		EAC26605AA314545A862DE2F /* libPods-ClutterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,9 @@
 		97E604B116093086002898CD /* CLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachine.m; path = Clutter/CLStateMachine.m; sourceTree = "<group>"; };
 		97E604B216093086002898CD /* CLStateMachineState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLStateMachineState.m; path = Clutter/CLStateMachineState.m; sourceTree = "<group>"; };
 		97E604C3160933B6002898CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		97FB435C161D217900783006 /* NSMutableDictionary+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+ClutterAdditions.h"; path = "Clutter/NSMutableDictionary+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97FB435D161D217900783006 /* NSMutableDictionary+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+ClutterAdditions.m"; path = "Clutter/NSMutableDictionary+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97FB4360161D22F500783006 /* NSMutableDictionary_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableDictionary_specs.m; sourceTree = "<group>"; };
 		FECA3C4CEBD64036BFDA7824 /* libPods-ClutterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ClutterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +246,7 @@
 				97BAE25515785CCD00449601 /* Clutter_specs.m */,
 				97A74F9E15792FAE00C093EF /* ClutterMacros_specs.m */,
 				97E5D84C159EDD3800D233F3 /* NSArray_specs.m */,
+				97FB4360161D22F500783006 /* NSMutableDictionary_specs.m */,
 				972D4A8B15BF74AC006B8AD9 /* NSObject_specs.m */,
 				97E5D83A159EC81E00D233F3 /* NSString_specs.m */,
 				97E5D840159ED0E000D233F3 /* NSURL_specs.m */,
@@ -289,6 +295,7 @@
 			children = (
 				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
 				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
+				97FB435C161D217900783006 /* NSMutableDictionary+ClutterAdditions.h */,
 				97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */,
 				97E5D836159EC49600D233F3 /* NSString+ClutterAdditions.h */,
 				97E5D83C159ECF1700D233F3 /* NSURL+ClutterAdditions.h */,
@@ -300,6 +307,7 @@
 				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
 				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
 				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
+				97FB435D161D217900783006 /* NSMutableDictionary+ClutterAdditions.m */,
 				97C93E1015BF2C66005A47D6 /* NSObject+ClutterAdditions.m */,
 				97E5D837159EC49600D233F3 /* NSString+ClutterAdditions.m */,
 				97E5D83D159ECF1700D233F3 /* NSURL+ClutterAdditions.m */,
@@ -491,6 +499,7 @@
 				9797693415C385A800440B43 /* UIApplication_specs.m in Sources */,
 				972674DF160806EA0004003E /* CLStateMachine_specs.m in Sources */,
 				978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */,
+				97FB4362161D230E00783006 /* NSMutableDictionary_specs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +524,7 @@
 				97E604B316093087002898CD /* CLStateMachine.m in Sources */,
 				97E604B416093087002898CD /* CLStateMachineState.m in Sources */,
 				978DD0EA161A5B340046D0C1 /* cl_error_catcher.mm in Sources */,
+				97FB435E161D217900783006 /* NSMutableDictionary+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

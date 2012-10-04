@@ -19,39 +19,11 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#import <Foundation/Foundation.h>
 
-#import "ClutterMacros.h"
+@interface NSMutableDictionary (ClutterAdditions)
 
-#include "cl_error.h"
-
-#if defined(__cplusplus)
-// c-only code needs an extern "C" declaration so that c++ calls will match.
-extern "C" {
-#endif
-
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSMutableDictionary+ClutterAdditions.h"
-#import "NSObject+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UIApplication+ClutterAdditions.h"
-#import "UIImage+ClutterAdditions.h"
-#import "UISearchBar+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#import "UITableViewCell+ClutterAdditions.h"
-
-#import "CLElasticSlider.h"
-#import "CLStateMachine.h"
-    
-#endif // __OBJC__
-
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // Clutter_Clutter_h
+/// Same as -objectForKey: unless the result would be nil.  In that case,
+/// evaluate block(), asign the result to key (if not nil), and return it.
+- (id)objectForKey:(id)aKey withInitializer:(id(^)())block;
+@end

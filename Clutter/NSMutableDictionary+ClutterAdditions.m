@@ -19,39 +19,19 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
-
-#import "ClutterMacros.h"
-
-#include "cl_error.h"
-
-#if defined(__cplusplus)
-// c-only code needs an extern "C" declaration so that c++ calls will match.
-extern "C" {
-#endif
-
-#ifdef __OBJC__
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
 #import "NSMutableDictionary+ClutterAdditions.h"
-#import "NSObject+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UIApplication+ClutterAdditions.h"
-#import "UIImage+ClutterAdditions.h"
-#import "UISearchBar+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#import "UITableViewCell+ClutterAdditions.h"
 
-#import "CLElasticSlider.h"
-#import "CLStateMachine.h"
-    
-#endif // __OBJC__
+@implementation NSMutableDictionary (ClutterAdditions)
 
-#if defined(__cplusplus)
+- (id)objectForKey:(id)key withInitializer:(id(^)())block
+{
+    id val = [self objectForKey:key];
+    if (!val) {
+        val = block();
+        if (val) {
+            [self setObject:val forKey:key];
+        }
+    }
+    return val;
 }
-#endif
-
-#endif // Clutter_Clutter_h
+@end
