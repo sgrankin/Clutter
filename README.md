@@ -1,4 +1,4 @@
-A dumping ground for useful bits of iOS and OSX development.
+Some generally-useful support bits for iOS and OSX development.
 
 ## Installation
 
@@ -69,6 +69,9 @@ Miss the comfort and safety of exceptions? No problem!
 ``` objc
 [obj initWithData:nil error:ERR_THROW()]
 ```
+
+### /rakelib/\*rake
+Some useful rake targets for iOS projects...
 
 ## License
 See `LICENSE`.

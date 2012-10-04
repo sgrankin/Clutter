@@ -2,13 +2,15 @@ POD_VERSION='v0.0.1'
 
 Pod::Spec.new do |s|
   s.name     = 'Clutter'
+  s.summary     = 'Some generally-useful support bits for iOS and OSX development.'
+  s.description = 'Some generally-useful support bits for iOS and OSX development.'
+
   s.version  = POD_VERSION[1..-1]
   s.license  = {type:'MIT', file:'LICENSE'}
-  s.summary  = 'Miscelaneous iOS/Mac classes and additions.'
-  s.homepage = 'http://www.thunderbunny.net/gitweb/Clutter.git'
+  s.homepage = 'https://github.com/sagran/Clutter'
   s.author   = {'Sergey Grankin' => 'sagran@gmail.com' }
-  s.source   = {git:'git:surge/Clutter.git', tag:POD_VERSION}
-  s.description = 'An unsorted assortment useful classes and additions.'
+  s.source   = {git:'https://github.com/sagran/Clutter.git', tag:POD_VERSION}
+
 
   s.source_files = 'Clutter'
   # s.header_mappings_dir = 'Clutter' # preserve the header directory layout
