@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   s.author   = {'Sergey Grankin' => 'sagran@gmail.com' }
   s.source   = {git:'https://github.com/sagran/Clutter.git', tag:POD_VERSION}
 
-
   s.source_files = 'Clutter'
   # s.header_mappings_dir = 'Clutter' # preserve the header directory layout
   s.preserve_paths = 'Specs'
@@ -25,7 +24,11 @@ Pod::Spec.new do |s|
   s.osx.frameworks = 'Foundation', 'CoreData'
   # s.libraries = 'objc'
 
-  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.xcconfig = {
+    'CLANG_CXX_LANGUAGE_STANDARD' => "gnu++0x",
+    'CLANG_CXX_LIBRARY' => "libc++",
+  }
+
   # s.dependency 'JSONKit', '~> 1.4'
 end
 
