@@ -37,6 +37,14 @@ describe(@"NSArray", ^{
             [[[@[@1, @2] mappedArrayUsingBlock:^(NSNumber *obj) { return obj.description; }] should] equal:@[@"1", @"2"]];
         });
     });
+    
+    describe(@"filteredArrayUsingBlock", ^{
+        it(@"works", ^{
+            [[[@[@1, @2, @3, @4] filteredArrayUsingBlock:^BOOL(NSNumber *obj) {
+                return [obj intValue] % 2 == 0;
+            }] should] equal:@[@2, @4]];
+        });
+    });
 });
 
 SPEC_END
