@@ -41,12 +41,14 @@
 static cl_error_handler_block cl_error_log = ^(NSError *error, char const *file, int line, char const *function)
 {
     NSLog(@"Error: %@", error);
+    DEBUG_BREAK();
 };
 
 /// Log an error, printing the source location.
 static cl_error_handler_block cl_error_trace = ^(NSError *error, char const *file, int line, char const *function)
 {
     NSLog(@"Error at %s:%d in %s: %@", file, line, function, error);
+    DEBUG_BREAK();
 };
 
 /// @throw an NSException instance built from an error.

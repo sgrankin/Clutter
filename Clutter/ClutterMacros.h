@@ -38,4 +38,10 @@
 /// Dispatch a macro function based on count of argument, e.g max -> max0, max1, etc.)
 #define DISPATCH(func, ...) PASTE(func, COUNT(__VA_ARGS__))(__VA_ARGS__ )
 
+#if DEBUG
+#define DEBUG_BREAK() raise(SIGTRAP)
+#else // DEBUG
+#define DEBUG_BREAK()
+#endif // DEBUG
+
 #endif
