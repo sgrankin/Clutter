@@ -87,6 +87,9 @@ public:
     // Implicitly convert to pointer to error so that this object can be used in place of &error.
     operator NSError * __autoreleasing *();
     
+    // Assign an error.  This allows for doing a manual check of an error you may already have.
+    NSError * __autoreleasing & operator=(NSError * __autoreleasing error);
+    
     // Check the error state and run handlers if changed.
     ~cl_error_catcher() noexcept(false);
 };

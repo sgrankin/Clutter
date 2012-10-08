@@ -71,6 +71,12 @@ cl_error_catcher::operator NSError * __autoreleasing *()
     return m_pError;
 }
 
+NSError * __autoreleasing &  cl_error_catcher::operator=(NSError *__autoreleasing error)
+{
+    *m_pError = error;
+    return *m_pError;
+}
+
 // Check the error state and run handlers if changed.
 cl_error_catcher::~cl_error_catcher() noexcept(false)
 {

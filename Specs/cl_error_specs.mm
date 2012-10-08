@@ -35,7 +35,7 @@ void maybeSetError(BOOL maybe, NSError **error)
 SPEC_BEGIN(cl_error_tests)
 
 describe(@"ERR_THROW", ^{
-    it(@"supports anonymous errors", ^{        
+    it(@"supports anonymous errors", ^{
         // anonymous error
         maybeSetError(NO, ERR_THROW()); // should not raise
         [[theBlock(^{ maybeSetError(YES, ERR_THROW()); }) should] raise];
@@ -43,20 +43,20 @@ describe(@"ERR_THROW", ^{
     });
     
     it(@"supports NSError*", ^{
-            // error on stack
-            __block NSError * error;
-            maybeSetError(NO, ERR_THROW(error)); // should not raise
-            [[theBlock(^{ maybeSetError(YES, ERR_THROW(error)); }) should] raise];
-            maybeSetError(YES, ERR_THROW(error)); // should not raise -- same error
+        // error on stack
+        __block NSError * error;
+        maybeSetError(NO, ERR_THROW(error)); // should not raise
+        [[theBlock(^{ maybeSetError(YES, ERR_THROW(error)); }) should] raise];
+        maybeSetError(YES, ERR_THROW(error)); // should not raise -- same error
     });
     
     it(@"supports NSError** parameters", ^{
-            // error as parameter
-            NSError * __autoreleasing error;
-            NSError * __autoreleasing * pError = &error;
-            maybeSetError(NO, ERR_THROW(pError)); // should not raise
-            [[theBlock(^{ maybeSetError(YES, ERR_THROW(pError)); }) should] raise];
-            maybeSetError(YES, ERR_THROW(pError)); // should not raise -- same error
+        // error as parameter
+        NSError * __autoreleasing error;
+        NSError * __autoreleasing * pError = &error;
+        maybeSetError(NO, ERR_THROW(pError)); // should not raise
+        [[theBlock(^{ maybeSetError(YES, ERR_THROW(pError)); }) should] raise];
+        maybeSetError(YES, ERR_THROW(pError)); // should not raise -- same error
     });
     
     it(@"supports NULL NSError** parameters", ^{
@@ -65,6 +65,27 @@ describe(@"ERR_THROW", ^{
         maybeSetError(NO, ERR_THROW(pError)); // should not raise
         [[theBlock(^{ maybeSetError(YES, ERR_THROW(pError)); }) should] raise];
         [[theBlock(^{ maybeSetError(YES, ERR_THROW(pError)); }) should] raise];
+    });
+    
+    it(@"supports anonymous NSError* assignments", ^{
+        ERR_THROW() = nil; // should not raise
+        
+        NSError *error;
+        maybeSetError(YES, &error);
+        [[theBlock(^{ERR_THROW() = error;}) should] raise];
+        [[theBlock(^{ERR_THROW() = [NSError errorWithDomain:NSOSStatusErrorDomain code:0 userInfo:nil];}) should] raise];
+    });
+    
+    it(@"supports slotted NSError* assignments", ^{
+        ERR_THROW() = nil;
+        
+        __block NSError *error1 = [NSError errorWithDomain:NSOSStatusErrorDomain code:0 userInfo:nil];
+        NSError *error2 = error1;
+        ERR_THROW(error1) = error2; // should not raise
+        [[@((uintptr_t)error1) should] equal:@((uintptr_t)error2)];
+        
+        [[theBlock(^{ERR_THROW(error1) = [NSError errorWithDomain:NSOSStatusErrorDomain code:1 userInfo:nil];}) should] raise];
+        [[@((uintptr_t)error1) shouldNot] equal:@((uintptr_t)error2)];
     });
 });
 
