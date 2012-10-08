@@ -38,7 +38,7 @@
 		977CA88815C0A8CE009376AD /* UISegmentedControl+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9710F38C1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.m */; };
 		978DD0EA161A5B340046D0C1 /* cl_error_catcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */; };
 		978DD0ED161A5EC80046D0C1 /* cl_error.h in Resources */ = {isa = PBXBuildFile; fileRef = 978DD0EC161A5EC80046D0C1 /* cl_error.h */; };
-		978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */; };
+		978DD0EF161A62D90046D0C1 /* cl_error_specs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 978DD0EE161A62D90046D0C1 /* cl_error_specs.mm */; };
 		9797693115C3675100440B43 /* UIApplication+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */; };
 		9797693415C385A800440B43 /* UIApplication_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797693315C385A800440B43 /* UIApplication_specs.m */; };
 		97A74F9F15792FAE00C093EF /* ClutterMacros_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A74F9E15792FAE00C093EF /* ClutterMacros_specs.m */; };
@@ -109,7 +109,7 @@
 		978DD0E8161A5A460046D0C1 /* cl_error_catcher.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = cl_error_catcher.h; path = Clutter/cl_error_catcher.h; sourceTree = "<group>"; };
 		978DD0E9161A5B340046D0C1 /* cl_error_catcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = cl_error_catcher.mm; path = Clutter/cl_error_catcher.mm; sourceTree = "<group>"; };
 		978DD0EC161A5EC80046D0C1 /* cl_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cl_error.h; path = Clutter/cl_error.h; sourceTree = "<group>"; };
-		978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cl_error_tests.mm; sourceTree = "<group>"; };
+		978DD0EE161A62D90046D0C1 /* cl_error_specs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = cl_error_specs.mm; sourceTree = "<group>"; };
 		978DD0F0161A69490046D0C1 /* Clutter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Clutter.podspec; sourceTree = "<group>"; };
 		9797692F15C3675100440B43 /* UIApplication+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+ClutterAdditions.h"; path = "Clutter/UIApplication+ClutterAdditions.h"; sourceTree = "<group>"; };
 		9797693015C3675100440B43 /* UIApplication+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+ClutterAdditions.m"; path = "Clutter/UIApplication+ClutterAdditions.m"; sourceTree = "<group>"; };
@@ -253,7 +253,7 @@
 				97E5D846159ED44C00D233F3 /* NSURLRequest_specs.m */,
 				9797693315C385A800440B43 /* UIApplication_specs.m */,
 				97E5D801159E820900D233F3 /* UISegmentedControl_specs.m */,
-				978DD0EE161A62D90046D0C1 /* cl_error_tests.mm */,
+				978DD0EE161A62D90046D0C1 /* cl_error_specs.mm */,
 				97BAE23C15785AAD00449601 /* Supporting Files */,
 			);
 			path = Specs;
@@ -498,7 +498,7 @@
 				972D4A8C15BF74AC006B8AD9 /* NSObject_specs.m in Sources */,
 				9797693415C385A800440B43 /* UIApplication_specs.m in Sources */,
 				972674DF160806EA0004003E /* CLStateMachine_specs.m in Sources */,
-				978DD0EF161A62D90046D0C1 /* cl_error_tests.mm in Sources */,
+				978DD0EF161A62D90046D0C1 /* cl_error_specs.mm in Sources */,
 				97FB4362161D230E00783006 /* NSMutableDictionary_specs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
