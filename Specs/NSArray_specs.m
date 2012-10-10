@@ -68,6 +68,20 @@ describe(@"NSArray", ^{
             [[[@[@"aa", @"AB"] sortedArrayWithKey:@"copy" ascending:YES selector:s] should] equal:@[@"aa", @"AB"]];
         });
     });
+    
+    describe(@"reverse", ^{
+        it(@"works", ^{
+            [[[@[@1, @2, @3] reversedArray] should] equal:@[@3, @2, @1]];
+        });
+    });
+    
+    describe(@"reduce", ^{
+        it(@"works", ^{
+            [[[@[@"1", @"2", @"3"] reduceWithInitialValue:@"0" block:^id(id obj1, id obj2) {
+                return [obj1 stringByAppendingString:obj2];
+            }] should] equal:@"0123"];
+        });
+    });
 });
 
 SPEC_END

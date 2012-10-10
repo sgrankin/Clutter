@@ -72,4 +72,18 @@
                                                 ascending:ascending
                                                 selector:selector]]];
 }
+
+- (NSArray *)reversedArray
+{
+    return [[self reverseObjectEnumerator] allObjects];
+}
+
+- (id)reduceWithInitialValue:(id)initial block:(id (^)(id, id))block
+{
+    id val = initial;
+    for (id obj in self)
+        val = block(val, obj);
+    return val;
+}
+
 @end

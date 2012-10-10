@@ -53,4 +53,15 @@
 /// @param ascending YES if the receiver specifies sorting in ascending order, otherwise NO
 /// @param selector The method to use when comparing the properties of objects, for example caseInsensitiveCompare: or localizedCompare:. See NSSortDescriptor/+sortDescriptorWithKey:ascending:selector:
 - (NSArray *)sortedArrayWithKey:(NSString *)keyPath ascending:(BOOL)ascending selector:(SEL)selector;
+
+/// Reverse the array.
+- (NSArray *)reversedArray;
+
+/// Apply a block sequentially to all elements of an array.
+///
+/// For an array of 2 elements, the equivalent expression would be `block(block(initial,self[0]),self[1])`.
+/// @param initial Initial value used as the first parameter of the block.
+/// @param block The block.
+- (id)reduceWithInitialValue:(id)initial block:(id(^)(id obj1, id obj2))block;
+
 @end
