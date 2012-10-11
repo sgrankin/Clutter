@@ -19,19 +19,33 @@
 // SOFTWARE.
 //
 
+#import <CoreImage/CoreImage.h>
+
 #import <TargetConditionals.h>
 #if (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (ClutterAdditions)
+@interface CIImage (ClutterAdditions)
 
-/// @name Resize
+/// Translate image such that image.exent.origin == {0,0}
+- (CIImage *)imageByTranslatingToOrigin;
 
-/// Resize the image.
-/// May increase the scale of the image when scaling down a large image on retina hardware
-/// @param contentMode Specifies how to place the content in the new image.
-- (UIImage *)imageByResizingToSize:(CGSize)size withContentMode:(UIViewContentMode)contentMode;
+/// Crop the image.
+/// @param size The size of the image to crop to.
+/// @param contentMode The edge/corner of the image to crop from.  Any contentMode that desn't mention at least
+////    one edge will result in cropping to bottom-left.
+- (CIImage *)imageByCroppingToSize:(CGSize)size withContentMode:(UIViewContentMode)contentMode;
+
+/// Resize the image by scaling and cropping.
+/// @param size The size of the final image.
+/// @param contentMode For scaling modes, scale the image and crop to size on center.  For cropping modes,
+///     crop to corner/edge..
+- (CIImage *)imageByResizingToSize:(CGSize)size withContentMode:(UIViewContentMode)contentMode;
+
+/// Resize the image by scaling both dimensions by scale.
+/// @param scale Scale to apply to both dimensions of the image.
+- (CIImage *)imageByResizingToScale:(CGFloat)scale;
 @end
 
 #endif

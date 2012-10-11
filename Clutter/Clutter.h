@@ -32,6 +32,7 @@ extern "C" {
 #endif
 
 #ifdef __OBJC__
+#import "CIImage+ClutterAdditions.h"
 #import "NSArray+ClutterAdditions.h"
 #import "NSFetchedResultsController+ClutterAdditions.h"
 #import "NSMutableDictionary+ClutterAdditions.h"

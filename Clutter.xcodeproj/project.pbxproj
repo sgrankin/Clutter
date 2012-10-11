@@ -45,6 +45,9 @@
 		97BAE23615785AAD00449601 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BAE23515785AAD00449601 /* SenTestingKit.framework */; };
 		97BAE24015785AAD00449601 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97BAE23E15785AAD00449601 /* InfoPlist.strings */; };
 		97BAE25615785CCD00449601 /* Clutter_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BAE25515785CCD00449601 /* Clutter_specs.m */; };
+		97C0C32716265C5D0079AB3D /* CIImage+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C0C32516265BC00079AB3D /* CIImage+ClutterAdditions.m */; };
+		97C0C3281626669E0079AB3D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977CA87515C0A796009376AD /* CoreGraphics.framework */; };
+		97C0C32A162666B40079AB3D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C0C329162666B40079AB3D /* CoreImage.framework */; };
 		97C519C015F9399600424734 /* UITableViewCell+ClutterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */; };
 		97E5D802159E820900D233F3 /* UISegmentedControl_specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E5D801159E820900D233F3 /* UISegmentedControl_specs.m */; };
 		97E5D828159E88B100D233F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97E5D826159E88B100D233F3 /* InfoPlist.strings */; };
@@ -121,6 +124,9 @@
 		97BAE23F15785AAD00449601 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97BAE24415785AAD00449601 /* ClutterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClutterTests-Prefix.pch"; sourceTree = "<group>"; };
 		97BAE25515785CCD00449601 /* Clutter_specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clutter_specs.m; sourceTree = "<group>"; };
+		97C0C32416265BC00079AB3D /* CIImage+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CIImage+ClutterAdditions.h"; path = "Clutter/CIImage+ClutterAdditions.h"; sourceTree = "<group>"; };
+		97C0C32516265BC00079AB3D /* CIImage+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CIImage+ClutterAdditions.m"; path = "Clutter/CIImage+ClutterAdditions.m"; sourceTree = "<group>"; };
+		97C0C329162666B40079AB3D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+ClutterAdditions.h"; path = "Clutter/UITableViewCell+ClutterAdditions.h"; sourceTree = "<group>"; };
 		97C519BF15F9399600424734 /* UITableViewCell+ClutterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+ClutterAdditions.m"; path = "Clutter/UITableViewCell+ClutterAdditions.m"; sourceTree = "<group>"; };
 		97C93E0F15BF2C66005A47D6 /* NSObject+ClutterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+ClutterAdditions.h"; path = "Clutter/NSObject+ClutterAdditions.h"; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C0C32A162666B40079AB3D /* CoreImage.framework in Frameworks */,
+				97C0C3281626669E0079AB3D /* CoreGraphics.framework in Frameworks */,
 				9728F4C115BF7DE600849A6E /* libobjc.dylib in Frameworks */,
 				97E5D869159EE5FB00D233F3 /* CoreData.framework in Frameworks */,
 				977CA87C15C0A819009376AD /* UIKit.framework in Frameworks */,
@@ -232,6 +240,7 @@
 				9728F4C015BF7DE600849A6E /* libobjc.dylib */,
 				97E5D867159EE5D700D233F3 /* CoreData.framework */,
 				977CA87515C0A796009376AD /* CoreGraphics.framework */,
+				97C0C329162666B40079AB3D /* CoreImage.framework */,
 				977CA87915C0A7A1009376AD /* Foundation.framework */,
 				97BAE23515785AAD00449601 /* SenTestingKit.framework */,
 				977CA87715C0A79A009376AD /* UIKit.framework */,
@@ -293,6 +302,7 @@
 		97E604C61609343F002898CD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				97C0C32416265BC00079AB3D /* CIImage+ClutterAdditions.h */,
 				97E5D848159EDC8900D233F3 /* NSArray+ClutterAdditions.h */,
 				97E5D85A159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.h */,
 				97FB435C161D217900783006 /* NSMutableDictionary+ClutterAdditions.h */,
@@ -305,6 +315,7 @@
 				97E5D85F159EE2F900D233F3 /* UISearchBar+ClutterAdditions.h */,
 				9710F38B1578508C00BA3FDC /* UISegmentedControl+ClutterAdditions.h */,
 				97C519BE15F9399600424734 /* UITableViewCell+ClutterAdditions.h */,
+				97C0C32516265BC00079AB3D /* CIImage+ClutterAdditions.m */,
 				97E5D849159EDC8900D233F3 /* NSArray+ClutterAdditions.m */,
 				97E5D85B159EE15E00D233F3 /* NSFetchedResultsController+ClutterAdditions.m */,
 				97FB435D161D217900783006 /* NSMutableDictionary+ClutterAdditions.m */,
@@ -525,6 +536,7 @@
 				97E604B416093087002898CD /* CLStateMachineState.m in Sources */,
 				978DD0EA161A5B340046D0C1 /* cl_error_catcher.mm in Sources */,
 				97FB435E161D217900783006 /* NSMutableDictionary+ClutterAdditions.m in Sources */,
+				97C0C32716265C5D0079AB3D /* CIImage+ClutterAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

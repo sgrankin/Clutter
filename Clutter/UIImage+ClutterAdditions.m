@@ -28,7 +28,7 @@
 
 #pragma mark - Resize
 
-- (UIImage *)resizedImageWithSize:(CGSize)size contentMode:(UIViewContentMode)contentMode
+- (UIImage *)imageByResizingToSize:(CGSize)size withContentMode:(UIViewContentMode)contentMode
 {
     if (CGSizeEqualToSize(self.size, size)) {
         return self; // well that was easy
