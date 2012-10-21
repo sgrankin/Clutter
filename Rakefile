@@ -2,7 +2,7 @@
 require 'bundler'
 Bundler.setup
 
-SOURCES = FileList['{Clutter,Specs}/**/*.{h,hpp,m,mm,c,cpp}']
+SOURCES = FileList['{Clutter,Specs}/**/*.{h,hpp,m,mm,c,cpp,cxx}']
 
 def xcrun_find tool
   return `xcrun -find #{tool}`.chomp

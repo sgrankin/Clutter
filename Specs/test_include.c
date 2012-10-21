@@ -19,40 +19,9 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#include "Clutter.h"
+#include "Clutter.h"
 
-#import "ClutterMacros.h"
-
-#ifdef __OBJC__
-#include "cl_error.h"
-
-#if defined(__cplusplus)
-// c-only code needs an extern "C" declaration so that c++ calls will match.
-extern "C" {
+#if defined(__cplusplus) || defined(__OBJC__)
+#pragma error "Unexpected compilation model"
 #endif
-
-#import "CIImage+ClutterAdditions.h"
-#import "NSArray+ClutterAdditions.h"
-#import "NSFetchedResultsController+ClutterAdditions.h"
-#import "NSMutableDictionary+ClutterAdditions.h"
-#import "NSObject+ClutterAdditions.h"
-#import "NSString+ClutterAdditions.h"
-#import "NSURL+ClutterAdditions.h"
-#import "NSURLRequest+ClutterAdditions.h"
-#import "UIApplication+ClutterAdditions.h"
-#import "UIImage+ClutterAdditions.h"
-#import "UISearchBar+ClutterAdditions.h"
-#import "UISegmentedControl+ClutterAdditions.h"
-#import "UITableViewCell+ClutterAdditions.h"
-
-#import "CLElasticSlider.h"
-#import "CLStateMachine.h"
-    
-#if defined(__cplusplus)
-}
-#endif
-
-#endif // __OBJC__
-
-#endif // Clutter_Clutter_h
