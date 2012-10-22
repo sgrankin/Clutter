@@ -17,10 +17,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
 
   s.frameworks = 'Foundation'
-  s.libraries = 'c++'
   s.xcconfig = {
-    'GCC_C_LANGUAGE_STANDARD' => 'gnu99',
-    'CLANG_CXX_LANGUAGE_STANDARD' => 'gnu++0x',
+    'OTHER_CFLAGS' => '-std=gnu11',
+    'OTHER_CPLUSPLUSFLAGS' => '-std=gnu++11 -stdlib=libc++',
   }
 
   s.source_files = "Clutter/#{FILE_GLOB}"
