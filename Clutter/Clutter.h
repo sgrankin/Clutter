@@ -25,6 +25,7 @@
 #import "Clutter+Config.h"
 #import "Clutter+Core.h"
 #import "Clutter+CoreData.h"
+#import "Clutter+CoreImage.h"
 #import "Clutter+Foundation.h"
 #import "Clutter+UIKit.h"
 
