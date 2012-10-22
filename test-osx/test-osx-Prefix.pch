@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'test-osx' target in the 'test-osx' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import "Clutter.h"
+#import "Kiwi.h"
+#endif

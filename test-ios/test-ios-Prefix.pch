@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'test-ios' target in the 'test-ios' project
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "Clutter.h"
+#import "Kiwi.h"
+#endif

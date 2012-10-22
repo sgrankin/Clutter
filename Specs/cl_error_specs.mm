@@ -19,8 +19,6 @@
 // SOFTWARE.
 //
 
-#import "Kiwi.h"
-
 void maybeSetError(BOOL maybe, NSError **error)
 {
     static NSError *s_error;

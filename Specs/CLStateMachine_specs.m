@@ -19,8 +19,6 @@
 // SOFTWARE.
 //
 
-#import "Kiwi.h"
-
 #import "CLStateMachine.h"
 
 @protocol CarState <NSObject>

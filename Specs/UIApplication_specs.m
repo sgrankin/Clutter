@@ -19,8 +19,6 @@
 // SOFTWARE.
 //
 
-#import "Kiwi.h"
-
 @interface TestApplicationObserver : NSObject <UIApplicationDelegate>
 @end
 @implementation TestApplicationObserver

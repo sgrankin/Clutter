@@ -19,8 +19,6 @@
 // SOFTWARE.
 //
 
-#import "Kiwi.h"
-
 SPEC_BEGIN(NSURLRequestSpec)
 
 describe(@"NSURLRequest", ^{

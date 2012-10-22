@@ -19,8 +19,6 @@
 // SOFTWARE.
 //
 
-#import "Kiwi.h"
-
 SPEC_BEGIN(NSMutableDictionarySpec)
 
 describe(@"NSMutableDictionary", ^{

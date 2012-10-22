@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>A2DynamicDelegate 2.0.2 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">A2DynamicDelegate 2.0.2 </a></h1>
+				<a id="developerHome" href="index.html">Alexsander Akers and Zachary Waldowski</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">A2DynamicDelegate 2.0.2 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">A2DynamicDelegate 2.0.2 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a></h1>
+
+<h2>Overview</h2>
+
+<p>Many programming languages (e.g. Ruby, Python, Lisp) conceptualize a reusable self-contained &ldquo;unit of work&rdquo; to simplify context and scope. In these languages, they are called &ldquo;closures&rdquo; or &ldquo;lambdas.&rdquo; Since OS X 10.6 and iOS 4.0, Objective-C (as well as C and C++) developers have their own: blocks.</p>
+
+<p>Whereas functions have to be defined in a static or global scope, blocks can be defined inline, allowing a block to utilize variables in its local scope. Apple Developer clarifies this in its <a href="[http://developer.apple.com/library/ios/featuredarticles/Short](http://developer.apple.com/library/ios/featuredarticles/Short"><em>A Short Practical Guide to Blocks</em></a>_Practical_Guide_Blocks/):</p>
+
+<blockquote><p>An even more valuable advantage of blocks over other forms of callback is that a block shares data in the local lexical scope. If you implement a method and in that method define a block, the block has access to the local variables and parameters of the method (including stack variables) as well as to functions and global variables, including instance variables.</p></blockquote>
+
+<p>There are many places in Objective-C where blocks make more sense than methods for delegation or simplistic function-like callbacks. While Apple is slowly migrating toward block callbacks (at the typically glacial pace of OS frameworks), <a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> serves to help bridge this gap by dynamically implementing protocol methods with blocks and creating block properties that do the same.</p>
+
+<p>For the same reason that blocks are better than functions because they can take advantage of its declaring scope, a dynamic (block-implemented) delegate is better than a normal delegate. Instead of having to set an instance or static variable for every piece of data that you want to pass between a creating a delegating object and receiving delegate methods, you can access them directly from the block.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li><strong>A2DynamicDelegate</strong>: Implement a class&rsquo;s delegate, datasource, or other delegated protocol by associating protocol methods with block implementations.</li>
+<li><strong>A2BlockDelegate</strong>: Create custom block properties in a category on a delegating object and dynamically map them to delegate (<code>UIAlertViewDelegate</code>), datasource (<code>UITableViewDataSource</code>), or other delegated protocol (<code>NSErrorRecoveryAttempting</code>) methods.</li>
+</ul>
+
+
+<h2>Getting Started</h2>
+
+<p><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> is made up of six files: <em><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a>.{h,m}</em>, <em>A2BlockDelegate.{h,m}</em>, and <em><a href="Classes/A2BlockClosure.html">A2BlockClosure</a>.{h,m}</em>. It also depends on <a href="[https://github.com/atgreen/libffi"><em>libffi</em></a>,](https://github.com/atgreen/libffi),) a copy of which is included in the binary releases.</p>
+
+<p>For the sake of convenience, you can either build the <strong>iOS Library</strong> target or download a binary release and use the <code>libA2DynamicDelegate.a</code> static library in place of the <em>.m</em> source files. This is useful for projects that use ARC because A2DynamicDelegate does not support it. (See below.)</p>
+
+<ol>
+<li>Copy the included files to your Xcode project.</li>
+<li>Implement protocol methods with blocks.</li>
+<li>(Optional) Look at how much simpler your code is.</li>
+</ol>
+
+
+<h2>A2DynamicDelegate</h2>
+
+<p>Implement a class&rsquo;s delegate, datasource, or other delegated protocol by associating protocol methods with block implementations.</p>
+
+<h3>Getting an <code>A2DynamicDelegate</code> Instance</h3>
+
+<p>To get the dynamic delegate for an object, use one of the three getters defined in <code>NSObject(A2DynamicDelegate)</code>.</p>
+
+<ul>
+<li><code>-dynamicDataSource</code> assumes protocol <code>FooBarDataSource</code> for instances of class <code>FooBar</code>.</li>
+<li><code>-dynamicDelegate</code> assumes protocol <code>FooBarDelegate</code> for instances of class <code>FooBar</code>.</li>
+<li><code>-dynamicDelegateForProtocol:</code> receives protocol explicitly.</li>
+</ul>
+
+
+<h4>Why can&rsquo;t I just alloc-init an <code>A2DynamicDelegate</code> instance?</h4>
+
+<p>Calling one of the above methods allows us to storing the dynamic delegate as an associated object of the delegating object. This not only allows us to later retrieve the delegate, but it also creates a strong relationship to the delegate. Since delegates are weak references on the part of the delegating object, a dynamic delegate would be deallocated immediately after its declaring scope ends. Therefore, this strong relationship is required to ensure that the delegate&rsquo;s lifetime is at least as long as that of the delegating object.</p>
+
+<h3>Usage</h3>
+
+<p>A dynamic delegate instance automatically implements protocol methods using the following methods:</p>
+
+<ul>
+<li><code>-implementMethod:withBlock:</code>: Implement a protocol method.</li>
+<li><code>-blockImplementationForMethod:</code>: Get block implementation. (Can also be used to check if method has block implementation.)</li>
+<li><code>-removeBlockImplementationForMethod:</code>: Remove block implementation for protocol method. methods.</li>
+</ul>
+
+
+<p>Methods also exist for implementing class methods.</p>
+
+<h3>Example</h3>
+
+<pre><code>- (IBAction) annoyUser
+{
+    // Create an alert view
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Hello World!" message: @"This alert's delegate is implemented using blocks. That's so cool!" delegate: nil cancelButtonTitle: @"Meh." otherButtonTitles: @"Woo!", nil];
+
+    // Get the dynamic delegate
+    A2DynamicDelegate *dd = alertView.dynamicDelegate;
+
+    // Implement -alertViewShouldEnableFirstOtherButton:
+    [dd implementMethod: @selector(alertViewShouldEnableFirstOtherButton:) withBlock: ^(UIAlertView *alertView) {
+        NSLog(@"Message: %@", alertView.message);
+        return YES;
+    }];
+
+    // Implement -alertView:willDismissWithButtonIndex:
+    [dd implementMethod: @selector(alertView:willDismissWithButtonIndex:) withBlock: ^(UIAlertView *alertView, NSInteger buttonIndex) {
+        NSLog(@"You pushed button #%d (%@)", buttonIndex, [alertView buttonTitleAtIndex: buttonIndex]);
+    }];
+
+    // Set the delegate
+    alertView.delegate = dd;
+
+    [alertView show];
+    [alertView release];
+}
+</code></pre>
+
+<p><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> is designed to be &lsquo;plug and play&rsquo;. It just works. Pretty neat, huh?</p>
+
+<p><em>Dont&rsquo;t forget to check out the Demo project.</em></p>
+
+<h3>Advanced Example</h3>
+
+<p>The dynamic delegate returned from one of the <code>-dynamic*</code> methods is actually part of a class cluster. For a dynamic delegate for protocol <code>UIAlertViewDelegate</code>, the following chain is produced:</p>
+
+<ul>
+<li><code>A2DynamicDelegate</code></li>
+<li><code>A2DynamicUIAlertViewDelegate</code></li>
+<li><code>A2DynamicUIAlertViewDelegate/983C3E20-285D-11E1-BFC2-0800200C9A66</code></li>
+</ul>
+
+
+<p>Therefore, you can actually create a subclass of <a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> in order to provide custom handling.</p>
+
+<p><strong>UIAlertView+<a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a>.h</strong>:</p>
+
+<pre><code>#import &lt;dispatch/dispatch.h&gt; // typedef void (^dispatch_block_t)(void);
+
+@interface UIAlertView (A2DynamicDelegate)
+
+- (NSInteger) addButtonWithTitle: (NSString *) title handler: (dispatch_block_t) block;
+- (dispatch_block_t) handlerForButtonAtIndex: (NSInteger) index;
+
+@end
+
+@interface A2DynamicUIAlertViewDelegate : A2DynamicDelegate
+
+@end
+</code></pre>
+
+<p><strong>UIAlertView+<a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a>.m</strong>:</p>
+
+<pre><code>@interface UIAlertView (A2DynamicDelegate)
+
+- (NSInteger) addButtonWithTitle: (NSString *) title handler: (dispatch_block_t) block
+{
+    NSInteger index = [self addButtonWithTitle: title];
+    id key = [NSNumber numberWithInteger: index];
+
+    if (block)
+        [self.dynamicDelegate.handlers setObject: block forKey: key];
+    else
+        [self.dynamicDelegate.handlers removeObjectForKey: key];
+
+    return index;
+}
+- (dispatch_block_t) handlerForButtonAtIndex: (NSInteger) index
+{
+    id key = [NSNumber numberWithInteger: index];
+    return [self.dynamicDelegate.handlers objectForKey: key];
+}
+
+@end
+
+@implementation A2DynamicUIAlertViewDelegate
+
+- (void) alertView: (UIAlertView *) alertView clickedButtonAtIndex: (NSInteger) buttonIndex
+{
+    id key = [NSNumber numberWithInteger: buttonIndex];
+    dispatch_block_t block = [self.handlers objectForKey: key];
+    if (block) block();
+
+    void (^buttonClicked)(UIAlertView *, NSInteger) = [self blockImplementationForMethod: _cmd];
+    if (buttonClicked) buttonClicked(alertView, buttonIndex);
+}
+
+@end
+</code></pre>
+
+<h2>A2BlockDelegate</h2>
+
+<p>Create custom block properties in a category on a delegating object and dynamically map them to delegate (<code>UIAlertViewDelegate</code>), datasource (<code>UITableViewDataSource</code>), or other delegated protocol (<code>NSErrorRecoveryAttempting</code>) methods.</p>
+
+<h3>Usage</h3>
+
+<p>Call one of the methods in the <code>A2BlockDelegate</code> category on a class to add a block property to that class.</p>
+
+<p>Just like <a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a>, A2BlockDelegate
+A2BlockDelegate automatically guesses which protocol to use for the implementation. A data source protocol (i.e. <code>FooDataSource</code> over <code>FooDelegate</code>) can be used using <code>+linkCategoryBlockProperty:withDataSourceMethod:</code> or <code>+linkDataSourceMethods:</code>. One can manually be specified using <code>+linkCategoryBlockProperty:withProtocol:method:</code> or <code>+linkProtocol:methods:</code>.</p>
+
+<ul>
+<li>Data Source: Assumes protocol <code>FooBarDataSource</code> for class <code>FooBar</code>
+
+<ul>
+<li><code>+linkCategoryBlockProperty:withDataSourceMethod:</code></li>
+<li><code>+linkDataSourceMethods:</code></li>
+</ul>
+</li>
+<li>Delegate: Assumes protocol <code>FooBarDelegate</code> for instances of class <code>FooBar</code>
+
+<ul>
+<li><code>+linkCategoryBlockProperty:withDelegateMethod</code></li>
+<li><code>+linkDelegateMethods:</code></li>
+</ul>
+</li>
+<li>Explicit Protocol
+
+<ul>
+<li><code>+linkCategoryBlockProperty:withProtocol:method:</code></li>
+<li><code>+linkProtocol:methods:</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p>These methods should be called in a category&rsquo;s <code>+load</code> method, before the application starts. Unlike <code>+initialize</code> which is only called once and should not be overwritten in a category, <code>+load</code> is called on all classes and categories before <code>main()</code> is called.</p>
+
+<h3>Example</h3>
+
+<p><strong>UIAlertView+A2BlockDelegate.h</strong>:</p>
+
+<pre><code>@interface UIAlertView (A2BlockDelegate)
+
+// Block properties must be (nonatomic, copy).
+@property (nonatomic, copy) BOOL (^shouldEnableFirstOtherButtonBlock)(UIAlertView *);
+@property (nonatomic, copy) void (^willDismissBlock)(UIAlertView *, NSInteger);
+
+@end
+</code></pre>
+
+<p><strong>UIAlertView+A2BlockDelegate.m</strong>:</p>
+
+<pre><code>@implementation UIAlertView (A2BlockDelegate)
+
+// Block properties must be dynamic. This means that the accessors
+// are provided at runtime (in this case, by A2BlockDelegate).
+
+@dynamic shouldEnableFirstOtherButtonBlock;
+@dynamic willDismissBlock;
+
++ (void) load
+{
+    /**
+     * In older code, this would be:
+     *
+     *    NSAutoreleasePool *pool = [NSAutoreleasePool new];
+     *    /* ... Code ... */
+     *    [pool release];
+     *
+     **/
+
+    @autoreleasepool
+    {
+        [self linkCategoryBlockProperty: @"shouldEnableFirstOtherButtonBlock" withDelegateMethod: @selector(alertViewShouldEnableFirstOtherButton:)];
+        [self linkCategoryBlockProperty: @"willDismissBlock" withDelegateMethod: @selector(alertView:willDismissWithButtonIndex:)];
+    }
+}
+
+@end
+</code></pre>
+
+<p>Or, alternatively, do it using a dictionary:</p>
+
+<pre><code>NSDictionary *methods = [NSDictionary dictionaryWithObjectsAndKeys:
+                         @"shouldEnableFirstOtherButtonBlock", @"alertViewShouldEnableFirstOtherButton:",
+                         @"willDismissBlock", @"alertView:willDismissWithButtonIndex:", nil];
+[self linkDelegateMethods: methods];
+</code></pre>
+
+<p><em>*Somewhere</em>:</p>
+
+<pre><code>- (IBAction) annoyUser
+{
+    // Create an alert view
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: @"Hello World!" message: @"This alert's delegate is implemented using blocks. That's so cool!" delegate: nil cancelButtonTitle: @"Meh." otherButtonTitles: @"Woo!", nil];
+
+    // Implement -alertViewShouldEnableFirstOtherButton:
+    alertView.shouldEnableFirstOtherButtonBlock = ^(UIAlertView *alertView) {
+        NSLog(@"Message: %@", alertView.message);
+        return YES;
+    };
+
+    // Implement -alertView:willDismissWithButtonIndex:
+    alertView.willDismissBlock = ^(UIAlertView *alertView, NSInteger buttonIndex) {
+        NSLog(@"You pushed button #%d (%@)", buttonIndex, [alertView buttonTitleAtIndex: buttonIndex]);
+    };
+
+    // Set the delegate
+    alertView.delegate = alertView.dynamicDelegate;
+
+    [alertView show];
+    [alertView release];
+}
+</code></pre>
+
+<h2><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> and ARC</h2>
+
+<p><strong>What is ARC?</strong> Automatic Reference Counting (or ARC) for Objective-C makes memory management the job of the compiler.</p>
+
+<p><strong><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> does not support ARC.</strong>  As a precaution, there is a <code>#error</code> compiler directive in each <em>.m</em> file if it compiled with ARC. Without these precautions, the implementations will build without errors, your application will crash at runtime if <a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> is used.</p>
+
+<p><strong>This is limitation of the Objective-C runtime library.</strong> The <code>objc_allocateClassPair</code> function used by <a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> crashes with an <code>EXC_BAD_ACCESS</code> exception if called under ARC.</p>
+
+<h2>License</h2>
+
+<p><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a> is licensed by <a href="http://alexsander.ca">Alexsander Akers</a> and <a href="http://pandamonia.us">Pandamonia LLC</a> under the Simplified BSD License, which is reproduced in its entirety here:</p>
+
+<blockquote><p>Copyright &copy; 2011, Alexsander Akers
+All rights reserved.</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ul>
+<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+</ul>
+
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &ldquo;AS IS&rdquo; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p></blockquote>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/A2BlockClosure.html">A2BlockClosure</a></li>
+							
+							<li><a href="Classes/A2DynamicDelegate.html">A2DynamicDelegate</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/NSObject+A2BlockDelegate.html">NSObject(A2BlockDelegate)</a></li>
+							
+							<li><a href="Categories/NSObject+A2DynamicDelegate.html">NSObject(A2DynamicDelegate)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 Alexsander Akers and Zachary Waldowski. All rights reserved. (Last updated: 2012-10-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

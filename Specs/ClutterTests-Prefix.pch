@@ -7,4 +7,6 @@
 #import <Foundation/Foundation.h>
 
 #import "Clutter.h"
+#import "Kiwi.h"
+
 #endif
