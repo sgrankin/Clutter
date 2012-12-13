@@ -22,7 +22,7 @@
 #ifndef Clutter_Clutter_UIKit_h
 #define Clutter_Clutter_UIKit_h
 
-#import "Clutter+Config.h"
+#include "Clutter+Config.h"
 
 #ifdef __OBJC__
 #if defined(__cplusplus)

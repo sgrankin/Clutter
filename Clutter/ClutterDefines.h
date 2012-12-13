@@ -19,24 +19,17 @@
 // SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "ClutterDefines.h"
+#ifndef Clutter_ClutterDefines_h
+#define Clutter_ClutterDefines_h
 
-@interface NSString (ClutterAdditions)
+#import <TargetConditionals.h>
+#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
 
-/// @name URL encoding 
+#ifdef __cplusplus
+#define CLUTTER_EXTERN		extern "C" __attribute__((visibility ("default")))
+#else
+#define CLUTTER_EXTERN	        extern __attribute__((visibility ("default")))
+#endif
 
-/// Encode a string such that it is useabl eas part of a query string parameter.
-- (NSString *)URLEncodedString;
-
-/// Decode a URL-encoded string.
-- (NSString *)URLDecodedString;
-
-
-/// @name Path Components
-
-/// Append multiple path components to a string.
-- (NSString *)stringByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
-@end
-
-CLUTTER_EXTERN NSString *NSStringFromBool(BOOL v);
+#endif

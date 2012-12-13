@@ -22,11 +22,12 @@
 #ifndef Clutter_Clutter_h
 #define Clutter_Clutter_h
 
-#import "Clutter+Config.h"
-#import "Clutter+Core.h"
-#import "Clutter+CoreData.h"
-#import "Clutter+CoreImage.h"
-#import "Clutter+Foundation.h"
-#import "Clutter+UIKit.h"
+#include "ClutterDefines.h"
+
+#include "Clutter+Core.h"
+#include "Clutter+CoreData.h"
+#include "Clutter+CoreImage.h"
+#include "Clutter+Foundation.h"
+#include "Clutter+UIKit.h"
 
 #endif // Clutter_Clutter_h

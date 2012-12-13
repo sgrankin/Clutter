@@ -34,6 +34,7 @@ extern "C" {
 #endif
     
 #import "CLStateMachine.h"
+#import "CLUserDefaults.h"
 
 #if defined(__cplusplus)
 }

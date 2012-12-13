@@ -52,3 +52,8 @@
     return result;
 }
 @end
+
+NSString *NSStringFromBool(BOOL v)
+{
+    return v ? @"YES" : @"NO";
+}

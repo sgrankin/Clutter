@@ -1,12 +1,16 @@
 
 PODS:
 - Kiwi (1.1.1)
+- MAObjCRuntime (HEAD based on 0.0.1)
 
 DEPENDENCIES:
 - Kiwi
 - Kiwi
+- MAObjCRuntime (HEAD)
+- MAObjCRuntime (HEAD)
 
 SPEC CHECKSUMS:
+  MAObjCRuntime: 284004079156d10cb8237bc3ffcfa3a0e1a0af22
   Kiwi: 06407ae4d33a33310aed1202113d002eda1d56eb
 
-COCOAPODS: 0.15.2
+COCOAPODS: 0.16.0

@@ -20,23 +20,36 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ClutterDefines.h"
 
-@interface NSString (ClutterAdditions)
+/**
+ A dynamic wrapper 
+ 
+ To use, subclass CLUserDefaults and declare @dynamic @properties, of the following types.
+ - id (plist only)
+ - NSInteger
+ - float
+ - double
+ - BOOL
+ 
+ The generated setters and getters will use the property name as the key.
+ */
+@interface CLUserDefaults : NSObject
 
-/// @name URL encoding 
+/// An instance initialized with [NSUserDefaults standardUserDefaults]
++ (instancetype)standardUserDefaults;
 
-/// Encode a string such that it is useabl eas part of a query string parameter.
-- (NSString *)URLEncodedString;
+/// An instance initialized with [NSUbiquitousKeyValueStore defaultStore]
++ (instancetype)defaultStore;
 
-/// Decode a URL-encoded string.
-- (NSString *)URLDecodedString;
+/// Initialize with the given container.
+/// This is the designated initializer.
+/// @param container NSUserDefaults or NSUbiquitousKeyValueStore  You may want to call registerDefaults on it.
+/// @discussion This is the designated initializer.
+- (id)initWithContainer:(id)container;
 
+/// Equivalent to initWithContainer:[NSUserDefaults standardDefaults].
+- (id)init;
 
-/// @name Path Components
-
-/// Append multiple path components to a string.
-- (NSString *)stringByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
+/// The container passed in init.
+@property (readonly) id container;
 @end
-
-CLUTTER_EXTERN NSString *NSStringFromBool(BOOL v);

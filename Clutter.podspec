@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'Specs'
 
   s.subspec 'Core' do |ss|
+    dependency 'MAObjCRuntime'
     ss.source_files = "Clutter/Core/*#{FILE_GLOB}"
   end
 

@@ -22,8 +22,6 @@
 #ifndef Clutter_Clutter_Config_h
 #define Clutter_Clutter_Config_h
 
-#import <TargetConditionals.h>
-#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
+
 
 #endif
