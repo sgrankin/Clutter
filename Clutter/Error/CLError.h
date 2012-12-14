@@ -20,38 +20,34 @@
 //
 
 #pragma once
+#import "ClutterDefines.h"
 
-#pragma  mark - Availability
+#if defined(__cplusplus)
+#import "CLErrorCatcher.h"
 
-#import <TargetConditionals.h>
-#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
+/** @group Default logging methods.
+ 
+ Suggested usage:
+ #if DEBUG
+ #define ERROR(...) ERR_THROW(__VA_ARGS__)
+ #else
+ #define ERROR(...) ERR_LOG(__VA_ARGS__)
+ #endif
+ */
 
+/// Log an error.
+extern cl_error_handler_block_t cl_error_log;;
 
-#pragma mark - Debugging
+/// Log an error, printing the source location.
+extern cl_error_handler_block_t cl_error_trace;;
 
-#if DEBUG
-#define DEBUG_BREAK() raise(SIGTRAP)
-#else
-#define DEBUG_BREAK()
+/// @throw an NSException instance built from an error.
+extern cl_error_handler_block_t cl_error_throw;;
+
+#if !defined(CLUTTER_NO_ERR_MACROS)
+#define ERR_LOG(...)   CL_ERR_CATCH(cl_error_log, ##__VA_ARGS__)
+#define ERR_TRACE(...) CL_ERR_CATCH(cl_error_trace, ##__VA_ARGS__)
+#define ERR_THROW(...) CL_ERR_CATCH(cl_error_throw, ##__VA_ARGS__)
 #endif
 
-
-#pragma mark - Preprocessor
-
-/// Paste 2 tokens
-#define PASTE(x,y) PASTE_(x,y)
-#define PASTE_(x,y) x##y
-
-/// Count the number of arguments (up to 10)
-#define COUNT(...) COUNT_(X, ##__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-#define COUNT_(_X, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, N, ...) N
-
-/// Dispatch a macro function based on count of argument, e.g max -> max0, max1, etc.)
-#define DISPATCH(func, ...) PASTE(func, COUNT(__VA_ARGS__))(__VA_ARGS__ )
-
-
-#pragma mark - Math
-
-/// Constrain the value of x to the [min,max] range.
-#define CLAMP(x, min, max) MAX((min), MIN((max), (x)))
+#endif // defined(__cplusplus)

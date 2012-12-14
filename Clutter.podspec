@@ -1,5 +1,11 @@
 POD_VERSION='v0.0.1'
-FILE_GLOB='*.{h,hpp,c,cpp,cxx,m,mm}'
+
+module ::G
+  def self.sources path
+    exts = ".{h,hpp,c,cpp,cxx,m,mm}"
+    return FileList["#{path}/*#{exts}"].exclude(/_Tests\./)
+  end
+end
 
 Pod::Spec.new do |s|
   s.name     = 'Clutter'
@@ -15,42 +21,44 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.ios.deployment_target = '5.0'
+  s.osx.deployment_target = '10.7'
 
-  s.frameworks = 'Foundation'
+  s.frameworks = %w{Foundation}
   s.xcconfig = {
     'OTHER_CFLAGS' => '-std=gnu11',
     'OTHER_CPLUSPLUSFLAGS' => '-std=gnu++11 -stdlib=libc++',
   }
 
-  s.source_files = "Clutter/#{FILE_GLOB}"
+  s.source_files = ::G.sources 'Clutter'
   s.prefix_header_contents = '#import "Clutter.h"'
-  s.preserve_paths = 'Specs'
+  # s.preserve_paths = 'Specs'
 
-  s.subspec 'Core' do |ss|
-    dependency 'MAObjCRuntime'
-    ss.source_files = "Clutter/Core/*#{FILE_GLOB}"
+  s.subspec 'CoreExt' do |ss|
+    frameworks = %w{CoreData CoreGraphics}
+    source_files = ::G.sources 'Clutter/CoreExt/**'
+
+    ss.ios.frameworks = frameworks + %w{CoreImage UIKit}
+    ss.ios.source_files = source_files.dup
+
+    ss.osx.frameworks = frameworks + %w{QuartzCore}
+    ss.osx.source_files = source_files.dup.exclude(/UIKit/)
+
+    ss.dependency 'MAObjCRuntime'
   end
 
-  s.subspec 'CoreData' do |ss|
-    ss.source_files = "Clutter/CoreData/#{FILE_GLOB}"
-    ss.frameworks = 'CoreData'
+  s.subspec 'Error' do |ss|
+    ss.source_files = ::G.sources 'Clutter/Error/**'
+    ss.dependency 'Clutter/CoreExt'
   end
 
-  s.subspec 'CoreImage' do |ss|
-    ss.source_files = "Clutter/CoreImage/#{FILE_GLOB}"
-    ss.frameworks = 'CoreGraphics'
-    ss.osx.frameworks = 'QuartzCore'
-    ss.ios.frameworks = 'CoreImage'
+  s.subspec 'StateMachine' do |ss|
+    ss.source_files = ::G.sources 'Clutter/StateMachine/**'
+    ss.dependency 'Clutter/CoreExt'
   end
 
-  s.subspec 'Foundation' do |ss|
-    ss.source_files = "Clutter/Foundation/#{FILE_GLOB}"
-  end
-
-  s.subspec 'UIKit' do |ss|
-    ss.source_files = "Clutter/UIKit/#{FILE_GLOB}"
-    ss.platform = :ios
-    ss.ios.frameworks = 'UIKit'
+  s.subspec 'UserDefaults' do |ss|
+    ss.source_files = ::G.sources 'Clutter/UserDefaults/**'
+    ss.dependency 'Clutter/CoreExt'
   end
 
   # s.header_mappings_dir = 'Clutter' # preserve the header directory layout

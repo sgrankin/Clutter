@@ -19,39 +19,26 @@
 // SOFTWARE.
 //
 
-#pragma once
+#include "CLError.h"
 
-#pragma  mark - Availability
+/// Log an error.
+cl_error_handler_block_t cl_error_log = ^(NSError *error, char const *file, int line, char const *function)
+{
+    NSLog(@"Error: %@", error);
+    DEBUG_BREAK();
+};
 
-#import <TargetConditionals.h>
-#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
+/// Log an error, printing the source location.
+cl_error_handler_block_t cl_error_trace = ^(NSError *error, char const *file, int line, char const *function)
+{
+    NSLog(@"Error at %s:%d in %s: %@", file, line, function, error);
+    DEBUG_BREAK();
+};
 
-
-#pragma mark - Debugging
-
-#if DEBUG
-#define DEBUG_BREAK() raise(SIGTRAP)
-#else
-#define DEBUG_BREAK()
-#endif
-
-
-#pragma mark - Preprocessor
-
-/// Paste 2 tokens
-#define PASTE(x,y) PASTE_(x,y)
-#define PASTE_(x,y) x##y
-
-/// Count the number of arguments (up to 10)
-#define COUNT(...) COUNT_(X, ##__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-#define COUNT_(_X, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, N, ...) N
-
-/// Dispatch a macro function based on count of argument, e.g max -> max0, max1, etc.)
-#define DISPATCH(func, ...) PASTE(func, COUNT(__VA_ARGS__))(__VA_ARGS__ )
-
-
-#pragma mark - Math
-
-/// Constrain the value of x to the [min,max] range.
-#define CLAMP(x, min, max) MAX((min), MIN((max), (x)))
+/// @throw an NSException instance built from an error.
+cl_error_handler_block_t cl_error_throw = ^(NSError *error, char const *file, int line, char const *function)
+{
+    @throw [NSException exceptionWithName:error.localizedDescription
+                                   reason:error.localizedFailureReason
+                                 userInfo:error.userInfo];
+};

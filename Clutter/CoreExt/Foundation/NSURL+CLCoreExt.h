@@ -19,39 +19,24 @@
 // SOFTWARE.
 //
 
-#pragma once
+#import <Foundation/Foundation.h>
 
-#pragma  mark - Availability
+@interface NSURL (CLCoreExt)
 
-#import <TargetConditionals.h>
-#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
+/// @name URL Append Query
 
+/// Create a URL by appending ?{query} to it.
+/// @warning Does not check that there is not already a query string.
+- (NSURL *)URLByAppendingQuery:(NSString *)query;
 
-#pragma mark - Debugging
-
-#if DEBUG
-#define DEBUG_BREAK() raise(SIGTRAP)
-#else
-#define DEBUG_BREAK()
-#endif
+/// Create a query string from the arguments dictionary, e.g. ?{key1}={value1}&{key1}={value2}, where keys and values are URL encoded, and append it to the url.
+/// @warning Does not check that there is not already a query string.
+- (NSURL *)URLByAppendingQueryArguments:(NSDictionary *)arguments;
 
 
-#pragma mark - Preprocessor
+/// @name Path Components
 
-/// Paste 2 tokens
-#define PASTE(x,y) PASTE_(x,y)
-#define PASTE_(x,y) x##y
+/// URL by appending multiple path components
+- (NSURL *)URLByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
 
-/// Count the number of arguments (up to 10)
-#define COUNT(...) COUNT_(X, ##__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-#define COUNT_(_X, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, N, ...) N
-
-/// Dispatch a macro function based on count of argument, e.g max -> max0, max1, etc.)
-#define DISPATCH(func, ...) PASTE(func, COUNT(__VA_ARGS__))(__VA_ARGS__ )
-
-
-#pragma mark - Math
-
-/// Constrain the value of x to the [min,max] range.
-#define CLAMP(x, min, max) MAX((min), MIN((max), (x)))
+@end

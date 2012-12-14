@@ -19,39 +19,24 @@
 // SOFTWARE.
 //
 
-#pragma once
+#import <Foundation/Foundation.h>
+#import "ClutterDefines.h"
 
-#pragma  mark - Availability
+@interface NSString (CLCoreExt)
 
-#import <TargetConditionals.h>
-#define CLUTTER_HAS_IPHONE  (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
-#define CLUTTER_HAS_UIKIT   (CLUTTER_HAS_IPHONE || CHAMELEON)
+/// @name URL encoding 
 
+/// Encode a string such that it is useabl eas part of a query string parameter.
+- (NSString *)URLEncodedString;
 
-#pragma mark - Debugging
-
-#if DEBUG
-#define DEBUG_BREAK() raise(SIGTRAP)
-#else
-#define DEBUG_BREAK()
-#endif
+/// Decode a URL-encoded string.
+- (NSString *)URLDecodedString;
 
 
-#pragma mark - Preprocessor
+/// @name Path Components
 
-/// Paste 2 tokens
-#define PASTE(x,y) PASTE_(x,y)
-#define PASTE_(x,y) x##y
+/// Append multiple path components to a string.
+- (NSString *)stringByAppendingPathComponents:(NSString *)firstComponent, ... NS_REQUIRES_NIL_TERMINATION;
+@end
 
-/// Count the number of arguments (up to 10)
-#define COUNT(...) COUNT_(X, ##__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-#define COUNT_(_X, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, N, ...) N
-
-/// Dispatch a macro function based on count of argument, e.g max -> max0, max1, etc.)
-#define DISPATCH(func, ...) PASTE(func, COUNT(__VA_ARGS__))(__VA_ARGS__ )
-
-
-#pragma mark - Math
-
-/// Constrain the value of x to the [min,max] range.
-#define CLAMP(x, min, max) MAX((min), MIN((max), (x)))
+FOUNDATION_EXPORT NSString *NSStringFromBool(BOOL v);

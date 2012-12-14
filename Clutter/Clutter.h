@@ -19,15 +19,25 @@
 // SOFTWARE.
 //
 
-#ifndef Clutter_Clutter_h
-#define Clutter_Clutter_h
+#pragma once
+#import "ClutterDefines.h"
 
-#include "ClutterDefines.h"
+#if defined(__OBJC__)
 
-#include "Clutter+Core.h"
-#include "Clutter+CoreData.h"
-#include "Clutter+CoreImage.h"
-#include "Clutter+Foundation.h"
-#include "Clutter+UIKit.h"
+#if __has_include("CLCoreExt.h")
+#include "CLCoreExt.h"
+#endif
 
-#endif // Clutter_Clutter_h
+#if __has_include("CLError.h")
+#include "CLError.h"
+#endif
+
+#if __has_include("CLStateMachine.h")
+#include "CLStateMachine.h"
+#endif
+
+#if __has_include("CLUserDefaults.h")
+#include "CLUserDefaults.h"
+#endif
+
+#endif // __OBJC__
