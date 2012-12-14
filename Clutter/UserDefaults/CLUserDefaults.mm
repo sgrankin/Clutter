@@ -67,13 +67,13 @@
 - (void)setObject:(id)value forKey:(NSString *)key
 {
     [self willChangeValueForKey:key];
-    [self.container setObject:value forKey:key];
+    (self.container)[key] = value;
     [self didChangeValueForKey:key];
 }
 
 - (id)objectForKey:(NSString *)key
 {
-    return [self.container objectForKey:key];
+    return (self.container)[key];
 }
 
 + (id)implForProperty:(RTProperty *)prop setter:(BOOL)setter

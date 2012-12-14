@@ -25,11 +25,11 @@
 
 - (id)objectForKey:(id)key withInitializer:(id(^)())block
 {
-    id val = [self objectForKey:key];
+    id val = self[key];
     if (!val) {
         val = block();
         if (val) {
-            [self setObject:val forKey:key];
+            self[key] = val;
         }
     }
     return val;
