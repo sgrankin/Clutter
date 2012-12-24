@@ -1,6 +1,7 @@
 # XCode workspace settings
 xcuserdata/
 
+/Readme.html
 /Info.plist.h
 docset-installed.txt
 Gemfile.lock

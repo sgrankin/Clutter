@@ -15,5 +15,3 @@ target :"clutter-osx", :exclusive => true do
     pod 'Kiwi'
   end
 end
-
-# vi:set ft=ruby:

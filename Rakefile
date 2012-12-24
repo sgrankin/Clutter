@@ -2,6 +2,8 @@
 require 'bundler'
 Bundler.setup
 
+require 'shellwords'
+
 SOURCES = FileList['{Clutter,Specs}/**/*.{h,hpp,m,mm,c,cpp,cxx}']
 
 def xcrun_find tool
@@ -17,4 +19,7 @@ task :precommit => [:license_fail_on_update]
 desc "Xcode prebuild script"
 task :prebuild => [:make_info_plist, :make_images]
 
-file 'README.html' => ['README.md']
+file 'Readme.html' => ['Readme.markdown']
+task :readme => ['Readme.html'] do |t|
+  sh %{open #{t.prerequisites.shelljoin}}
+end
