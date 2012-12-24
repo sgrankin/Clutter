@@ -1,7 +1,5 @@
 # encoding: UTF-8
-require 'bundler'
-Bundler.setup
-
+require 'bundler/setup'
 require 'shellwords'
 
 SOURCES = FileList['{Clutter,Specs}/**/*.{h,hpp,m,mm,c,cpp,cxx}']
