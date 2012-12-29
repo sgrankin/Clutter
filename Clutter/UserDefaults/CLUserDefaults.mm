@@ -67,13 +67,13 @@
 - (void)setObject:(id)value forKey:(NSString *)key
 {
     [self willChangeValueForKey:key];
-    (self.container)[key] = value;
+    [self.container setObject:value forKey:key];
     [self didChangeValueForKey:key];
 }
 
 - (id)objectForKey:(NSString *)key
 {
-    return (self.container)[key];
+    return [self.container objectForKey:key];
 }
 
 + (id)implForProperty:(RTProperty *)prop setter:(BOOL)setter
@@ -83,13 +83,13 @@
         case '@':
             if (setter) return [^(CLUserDefaults *self, id value) { [self setObject:value forKey:key]; } copy];
             else        return [^(CLUserDefaults *self) { return [self objectForKey:key]; } copy];
-        
+            
             // Convert primitives to NSNumer values
 #define IMPL(T, TYPE, TYPE_UPPER, TYPE_LOWER) \
         case T: \
             if (setter) return [^(CLUserDefaults *self, TYPE value) { [self setObject:[NSNumber numberWith##TYPE_UPPER:value] forKey:key]; } copy]; \
             else        return [^(CLUserDefaults *self) { return [[self objectForKey:key] TYPE_LOWER##Value]; } copy];
-            
+        
         IMPL('c', char, Char, char);
         IMPL('d', double, Double, double);
         IMPL('f', float, Float, float);
@@ -130,7 +130,7 @@
 + (BOOL)resolveInstanceMethod:(SEL)sel
 {
     NSString *propName = NSStringFromSelector(sel);
-
+    
     // assume selector is propName or setPropName:
     BOOL setter = NO;
     if ([propName hasPrefix:@"set"] && [propName hasSuffix:@":"]) {
