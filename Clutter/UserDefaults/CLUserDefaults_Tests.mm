@@ -21,6 +21,8 @@
 
 #import "CLUserDefaults.h"
 
+#import "A2DynamicDelegate.h"
+
 @interface Settings : CLUserDefaults
 @property id p1;
 @property BOOL p2;
@@ -43,7 +45,7 @@ SPEC_BEGIN(CLUserDefaultsSpec)
 
 describe(@"CLUserDefaults", ^{
     Settings *s = [Settings new];
-
+    
     it(@"works for objects", ^{
 #define TEST_PROP(PNAME, PVAL) s.PNAME = PVAL; [[s.PNAME should] equal:PVAL];
         TEST_PROP(p1, @{@"key":@2});
@@ -68,6 +70,33 @@ describe(@"CLUserDefaults", ^{
     it (@"Notifies self of changes", ^{
         [[[s should] receive] didChangeValueForKey:@"p1"];
         s.p1 = @{@"bar": @0};
+    });
+    
+    it (@"Notifies delegate of changes", ^{
+        A2DynamicDelegate<CLUserDefaultsDelegate> *delegate = [s dynamicDelegateForProtocol:@protocol(CLUserDefaultsDelegate)];
+        __block BOOL received = NO;
+        [delegate implementMethod:@selector(userDefaultsDidChange:) withBlock:^{
+            received = YES;
+        }];
+        s.delegate = delegate;
+        [[[delegate should] receive] userDefaultsDidChange:s];
+        s.p1 = @"hello";
+        s.delegate = nil;
+    });
+    
+    it (@"Sends notification", ^{
+        // Mock in a description method as the notification receiver, since we don't have a type compatible one sitting about.
+        
+        id receiver = [NSObject mock];
+        [[receiver stub] description];
+        [[receiver should] receive:@selector(description)];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:receiver
+                                                 selector:@selector(description)
+                                                     name:CLUserDefaultsDidChangeNotification
+                                                   object:s];
+        s.p1 = @"world";
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:CLUserDefaultsDidChangeNotification object:s];
     });
 });
 

@@ -26,6 +26,8 @@
 #import "RTMethod.h"
 #import <objc/runtime.h>
 
+NSString * const CLUserDefaultsDidChangeNotification = @"CLUserDefaultsDidChangeNotification";
+
 @interface CLUserDefaults ()
 @property NSUserDefaults *container;
 @end
@@ -50,8 +52,27 @@
 {
     if (self = [super init]) {
         _container = container;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(defaultsDidChange:)
+                                                     name:NSUserDefaultsDidChangeNotification
+                                                   object:_container];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)defaultsDidChange:(NSNotification *)notification
+{
+    if (self.delegate) {
+        [self.delegate userDefaultsDidChange:self];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:CLUserDefaultsDidChangeNotification
+                                                        object:self];
 }
 
 - (void)setObject:(id)value forKey:(NSString *)key

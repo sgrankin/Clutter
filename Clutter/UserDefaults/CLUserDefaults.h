@@ -21,6 +21,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol  CLUserDefaultsDelegate;
+
 /**
  A dynamic wrapper 
  
@@ -52,3 +54,11 @@
 
 @property (weak) id<CLUserDefaultsDelegate> delegate;
 @end
+
+
+@protocol CLUserDefaultsDelegate <NSObject>
+- (void)userDefaultsDidChange:(CLUserDefaults *)sender;
+@end
+
+FOUNDATION_EXPORT NSString * const CLUserDefaultsDidChangeNotification;
+
