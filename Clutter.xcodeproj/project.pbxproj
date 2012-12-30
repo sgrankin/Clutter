@@ -73,15 +73,10 @@
 		97882758167AD9A100093E8B /* NSURLRequest+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882724167AD9A100093E8B /* NSURLRequest+CLCoreExt.mm */; };
 		97882759167AD9A100093E8B /* NSURLRequest+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882724167AD9A100093E8B /* NSURLRequest+CLCoreExt.mm */; };
 		9788275A167AD9A100093E8B /* UIApplication+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882727167AD9A100093E8B /* UIApplication+CLCoreExt.mm */; };
-		9788275B167AD9A100093E8B /* UIApplication+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882727167AD9A100093E8B /* UIApplication+CLCoreExt.mm */; };
 		9788275E167AD9A100093E8B /* UIImage+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272A167AD9A100093E8B /* UIImage+CLCoreExt.mm */; };
-		9788275F167AD9A100093E8B /* UIImage+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272A167AD9A100093E8B /* UIImage+CLCoreExt.mm */; };
 		97882760167AD9A100093E8B /* UISearchBar+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272C167AD9A100093E8B /* UISearchBar+CLCoreExt.mm */; };
-		97882761167AD9A100093E8B /* UISearchBar+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272C167AD9A100093E8B /* UISearchBar+CLCoreExt.mm */; };
 		97882762167AD9A100093E8B /* UISegmentedControl+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272E167AD9A100093E8B /* UISegmentedControl+CLCoreExt.mm */; };
-		97882763167AD9A100093E8B /* UISegmentedControl+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272E167AD9A100093E8B /* UISegmentedControl+CLCoreExt.mm */; };
 		97882766167AD9A100093E8B /* UITableViewCell+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882731167AD9A100093E8B /* UITableViewCell+CLCoreExt.mm */; };
-		97882767167AD9A100093E8B /* UITableViewCell+CLCoreExt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882731167AD9A100093E8B /* UITableViewCell+CLCoreExt.mm */; };
 		97882768167AD9A100093E8B /* CLError.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882734167AD9A100093E8B /* CLError.mm */; };
 		97882769167AD9A100093E8B /* CLError.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882734167AD9A100093E8B /* CLError.mm */; };
 		9788276C167AD9A100093E8B /* CLErrorCatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882737167AD9A100093E8B /* CLErrorCatcher.mm */; };
@@ -98,8 +93,6 @@
 		97882799167ADA3000093E8B /* NSString+CLCoreExt_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882785167AD9D400093E8B /* NSString+CLCoreExt_Tests.mm */; };
 		9788279A167ADA3000093E8B /* NSURL+CLCoreExt_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882786167AD9D400093E8B /* NSURL+CLCoreExt_Tests.mm */; };
 		9788279B167ADA3000093E8B /* NSURLRequest+CLCoreExt_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882787167AD9D400093E8B /* NSURLRequest+CLCoreExt_Tests.mm */; };
-		9788279C167ADA3000093E8B /* UIApplication_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882728167AD9A100093E8B /* UIApplication_Tests.mm */; };
-		9788279D167ADA3000093E8B /* UISegmentedControl_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788272F167AD9A100093E8B /* UISegmentedControl_Tests.mm */; };
 		9788279E167ADA3000093E8B /* CLError_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882735167AD9A100093E8B /* CLError_Tests.mm */; };
 		9788279F167ADA3000093E8B /* CLStateMachine_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9788273F167AD9A100093E8B /* CLStateMachine_Tests.mm */; };
 		978827A0167ADA3000093E8B /* CLUserDefaults_Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97882745167AD9A100093E8B /* CLUserDefaults_Tests.mm */; };
@@ -925,8 +918,6 @@
 				97882799167ADA3000093E8B /* NSString+CLCoreExt_Tests.mm in Sources */,
 				9788279A167ADA3000093E8B /* NSURL+CLCoreExt_Tests.mm in Sources */,
 				9788279B167ADA3000093E8B /* NSURLRequest+CLCoreExt_Tests.mm in Sources */,
-				9788279C167ADA3000093E8B /* UIApplication_Tests.mm in Sources */,
-				9788279D167ADA3000093E8B /* UISegmentedControl_Tests.mm in Sources */,
 				9788279E167ADA3000093E8B /* CLError_Tests.mm in Sources */,
 				9788279F167ADA3000093E8B /* CLStateMachine_Tests.mm in Sources */,
 				978827A0167ADA3000093E8B /* CLUserDefaults_Tests.mm in Sources */,
@@ -976,11 +967,6 @@
 				97882755167AD9A100093E8B /* NSString+CLCoreExt.mm in Sources */,
 				97882757167AD9A100093E8B /* NSURL+CLCoreExt.mm in Sources */,
 				97882759167AD9A100093E8B /* NSURLRequest+CLCoreExt.mm in Sources */,
-				9788275B167AD9A100093E8B /* UIApplication+CLCoreExt.mm in Sources */,
-				9788275F167AD9A100093E8B /* UIImage+CLCoreExt.mm in Sources */,
-				97882761167AD9A100093E8B /* UISearchBar+CLCoreExt.mm in Sources */,
-				97882763167AD9A100093E8B /* UISegmentedControl+CLCoreExt.mm in Sources */,
-				97882767167AD9A100093E8B /* UITableViewCell+CLCoreExt.mm in Sources */,
 				97882769167AD9A100093E8B /* CLError.mm in Sources */,
 				9788276D167AD9A100093E8B /* CLErrorCatcher.mm in Sources */,
 				9788277D167AD9A100093E8B /* CLStateMachineState.mm in Sources */,
