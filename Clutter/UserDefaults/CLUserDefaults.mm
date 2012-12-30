@@ -27,7 +27,7 @@
 #import <objc/runtime.h>
 
 @interface CLUserDefaults ()
-@property id container;
+@property NSUserDefaults *container;
 @end
 
 @implementation CLUserDefaults
@@ -41,22 +41,12 @@
     return defaults;
 }
 
-+ (instancetype)defaultStore
-{
-    static dispatch_once_t onceToken;
-    static CLUserDefaults *defaults;
-    dispatch_once(&onceToken, ^{
-        defaults = [[self.class alloc] initWithContainer:[NSUbiquitousKeyValueStore defaultStore]];
-    });
-    return defaults;
-}
-
 - (id)init
 {
     return [self initWithContainer:[NSUserDefaults standardUserDefaults]];
 }
 
-- (id)initWithContainer:(id)container
+- (id)initWithContainer:(NSUserDefaults *)container
 {
     if (self = [super init]) {
         _container = container;
@@ -114,7 +104,6 @@
 {
     return [NSString stringWithFormat:(setter ? @"v@:%@" : @"%@@:"), type];
 }
-
 
 + (BOOL)resolveInstanceMethod:(SEL)sel forProperty:(RTProperty *)prop setter:(BOOL)setter
 {

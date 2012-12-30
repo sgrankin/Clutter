@@ -38,18 +38,17 @@
 /// An instance initialized with [NSUserDefaults standardUserDefaults]
 + (instancetype)standardUserDefaults;
 
-/// An instance initialized with [NSUbiquitousKeyValueStore defaultStore]
-+ (instancetype)defaultStore;
-
 /// Initialize with the given container.
 /// This is the designated initializer.
 /// @param container NSUserDefaults or NSUbiquitousKeyValueStore  You may want to call registerDefaults on it.
 /// @discussion This is the designated initializer.
-- (id)initWithContainer:(id)container;
+- (id)initWithContainer:(NSUserDefaults *)container;
 
 /// Equivalent to initWithContainer:[NSUserDefaults standardDefaults].
 - (id)init;
 
 /// The container passed in init.
-@property (readonly) id container;
+@property (readonly) NSUserDefaults *container;
+
+@property (weak) id<CLUserDefaultsDelegate> delegate;
 @end
