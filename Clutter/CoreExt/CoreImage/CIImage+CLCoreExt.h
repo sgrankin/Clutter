@@ -48,13 +48,13 @@ typedef NS_ENUM(NSInteger, CIImageContentMode)
 
 /// Crop the image.
 /// @param size The size of the image to crop to.
-/// @param contentsGravity The edge/corner of the image to crop from.  Any contentsGravity that desn't mention at least
+/// @param contentMode The edge/corner of the image to crop from.  Any contentsGravity that desn't mention at least
 ////    one edge will result in cropping to bottom-left.  Defaults to kCAGravityCenter
 - (CIImage *)imageByCroppingToSize:(CGSize)size withContentMode:(CIImageContentMode)contentMode;
 
 /// Resize the image by scaling and cropping.
 /// @param size The size of the final image.
-/// @param contentsGravity For scaling modes, scale the image and crop to size on center.  For cropping modes,
+/// @param contentMode For scaling modes, scale the image and crop to size on center.  For cropping modes,
 ///     crop to corner/edge..  Defaults to kCAGravityCenter
 - (CIImage *)imageByResizingToSize:(CGSize)size withContentMode:(CIImageContentMode)contentMode;
 

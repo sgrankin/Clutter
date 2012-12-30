@@ -1342,6 +1342,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wdocumentation";
 			};
 			name = Debug;
 		};
@@ -1356,6 +1357,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wdocumentation";
 			};
 			name = Release;
 		};
