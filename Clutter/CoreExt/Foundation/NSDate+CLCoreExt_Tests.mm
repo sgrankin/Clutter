@@ -26,7 +26,7 @@ SPEC_BEGIN(NSDateSpec)
 describe(@"NSDate", ^{
     describe(@"localizedStringWithDateFormatTemplate", ^{
         it(@"formats", ^{
-            auto date = [NSDate dateWithTimeIntervalSince1970:86400]; // +1d to offset timezone effects
+            NSDate *date = [NSDate dateWithTimeIntervalSince1970:86400]; // +1d to offset timezone effects
             auto date_str = [date stringWithDateFormatTemplate:@"yyyy" locale:[NSLocale systemLocale]];
             [[date_str should] equal:@"1970"];
         });

@@ -97,7 +97,7 @@ static char const *CLUIApplicationDelegateObserver_Key = "UIApplicationDelegateN
 {
     UIApplication *application = note.object;
     
-    UIInterfaceOrientation statusBarOrientation = [note.userInfo[UIApplicationStatusBarOrientationUserInfoKey] intValue];
+    UIInterfaceOrientation statusBarOrientation = (UIInterfaceOrientation)[note.userInfo[UIApplicationStatusBarOrientationUserInfoKey] intValue];
     CGRect statusBarFrame = [note.userInfo[UIApplicationStatusBarFrameUserInfoKey] CGRectValue];
     
     id<UIApplicationDelegate> delegate = self.delegate;
