@@ -1,6 +1,7 @@
 # XCode workspace settings
 xcuserdata/
 
+/Pods/Documentation/
 /Readme.html
 /Info.plist.h
 docset-installed.txt

@@ -1,9 +1,14 @@
 
 PODS:
+- A2DynamicDelegate (2.0.2):
+  - libffi
 - Kiwi (1.1.1)
 - MAObjCRuntime (HEAD based on 0.0.1)
+- libffi (3.0.11)
 
 DEPENDENCIES:
+- A2DynamicDelegate
+- A2DynamicDelegate
 - Kiwi
 - Kiwi
 - MAObjCRuntime (HEAD)
@@ -11,6 +16,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   MAObjCRuntime: 284004079156d10cb8237bc3ffcfa3a0e1a0af22
+  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
   Kiwi: 06407ae4d33a33310aed1202113d002eda1d56eb
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
 
 COCOAPODS: 0.16.0
