@@ -52,9 +52,14 @@
 /// The container passed in init.
 @property (readonly) NSUserDefaults *container;
 
+/// Notification delegate
 @property (weak) id<CLUserDefaultsDelegate> delegate;
-@end
 
+#pragma mark - Protected interafce
+/// Override to handle change events internally (e.g. to synchronize settings).
+/// Must call super, or send out notifications both to delegate and NotificationCenter.
+- (void)defaultsDidChange:(NSNotification *)notification;
+@end
 
 @protocol CLUserDefaultsDelegate <NSObject>
 - (void)userDefaultsDidChange:(CLUserDefaults *)sender;
