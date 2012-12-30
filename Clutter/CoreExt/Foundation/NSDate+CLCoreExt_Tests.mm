@@ -19,25 +19,18 @@
 // SOFTWARE.
 //
 
-#pragma once
-#import <Foundation/Foundation.h>
+#import "Kiwi.h"
 
-#import "ClutterDefines.h"
+SPEC_BEGIN(NSDateSpec)
 
-#include "NSFetchedResultsController+CLCoreExt.h"
-#include "CIImage+CLCoreExt.h"
-#include "NSArray+CLCoreExt.h"
-#include "NSDate+CLCoreExt.h"
-#include "NSMutableDictionary+CLCoreExt.h"
-#include "NSObject+CLCoreExt.h"
-#include "NSString+CLCoreExt.h"
-#include "NSURL+CLCoreExt.h"
-#include "NSURLRequest+CLCoreExt.h"
+describe(@"NSDate", ^{
+    describe(@"localizedStringWithDateFormatTemplate", ^{
+        it(@"formats", ^{
+            auto date = [NSDate dateWithTimeIntervalSince1970:86400]; // +1d to offset timezone effects
+            auto date_str = [date stringWithDateFormatTemplate:@"yyyy" locale:[NSLocale systemLocale]];
+            [[date_str should] equal:@"1970"];
+        });
+    });
+});
 
-#if CLUTTER_HAS_UIKIT
-#include "UIApplication+CLCoreExt.h"
-#include "UIImage+CLCoreExt.h"
-#include "UISearchBar+CLCoreExt.h"
-#include "UISegmentedControl+CLCoreExt.h"
-#include "UITableViewCell+CLCoreExt.h"
-#endif
+SPEC_END

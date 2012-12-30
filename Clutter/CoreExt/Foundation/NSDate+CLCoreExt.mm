@@ -19,25 +19,22 @@
 // SOFTWARE.
 //
 
-#pragma once
-#import <Foundation/Foundation.h>
+#import "NSDate+CLCoreExt.h"
 
-#import "ClutterDefines.h"
+@implementation NSDate (CLCoreExt)
 
-#include "NSFetchedResultsController+CLCoreExt.h"
-#include "CIImage+CLCoreExt.h"
-#include "NSArray+CLCoreExt.h"
-#include "NSDate+CLCoreExt.h"
-#include "NSMutableDictionary+CLCoreExt.h"
-#include "NSObject+CLCoreExt.h"
-#include "NSString+CLCoreExt.h"
-#include "NSURL+CLCoreExt.h"
-#include "NSURLRequest+CLCoreExt.h"
+- (NSString *)stringWithDateFormatTemplate:(NSString *)dateFormatTemplate
+{
+    return [self stringWithDateFormatTemplate:dateFormatTemplate locale:[NSLocale currentLocale]];
+}
 
-#if CLUTTER_HAS_UIKIT
-#include "UIApplication+CLCoreExt.h"
-#include "UIImage+CLCoreExt.h"
-#include "UISearchBar+CLCoreExt.h"
-#include "UISegmentedControl+CLCoreExt.h"
-#include "UITableViewCell+CLCoreExt.h"
-#endif
+- (NSString *)stringWithDateFormatTemplate:(NSString *)dateFormatTemplate locale:(NSLocale *)locale
+{
+    auto formatter = [NSDateFormatter new];
+    formatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:dateFormatTemplate
+                                                           options:0
+                                                            locale:locale];
+    return [formatter stringFromDate:self];
+}
+
+@end

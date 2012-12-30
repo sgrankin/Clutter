@@ -19,25 +19,10 @@
 // SOFTWARE.
 //
 
-#pragma once
 #import <Foundation/Foundation.h>
 
-#import "ClutterDefines.h"
+@interface NSDate (CLCoreExt)
 
-#include "NSFetchedResultsController+CLCoreExt.h"
-#include "CIImage+CLCoreExt.h"
-#include "NSArray+CLCoreExt.h"
-#include "NSDate+CLCoreExt.h"
-#include "NSMutableDictionary+CLCoreExt.h"
-#include "NSObject+CLCoreExt.h"
-#include "NSString+CLCoreExt.h"
-#include "NSURL+CLCoreExt.h"
-#include "NSURLRequest+CLCoreExt.h"
-
-#if CLUTTER_HAS_UIKIT
-#include "UIApplication+CLCoreExt.h"
-#include "UIImage+CLCoreExt.h"
-#include "UISearchBar+CLCoreExt.h"
-#include "UISegmentedControl+CLCoreExt.h"
-#include "UITableViewCell+CLCoreExt.h"
-#endif
+- (NSString *)stringWithDateFormatTemplate:(NSString *)dateFormatTemplate locale:(NSLocale *)locale;
+- (NSString *)stringWithDateFormatTemplate:(NSString *)dateFormatTemplate;
+@end
