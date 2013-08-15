@@ -1,1 +1,1 @@
-../../libffi/ios/include/fficonfig.h
+../../libffi/osx/include/fficonfig.h

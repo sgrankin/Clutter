@@ -1,1 +1,1 @@
-../../libffi/ios/include/ffi_common.h
+../../libffi/osx/include/ffi_common.h

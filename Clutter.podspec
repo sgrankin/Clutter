@@ -3,7 +3,9 @@ POD_VERSION='v0.0.1'
 module ::G
   def self.sources path
     exts = ".{h,hpp,c,cpp,cxx,m,mm}"
-    return FileList["#{path}/*#{exts}"].exclude(/_Tests\./)
+    includes = "#{path}/**/*#{exts}"
+    excludes = "#{path}/**/*_Tests#{exts}"
+    return includes, excludes
   end
 end
 
@@ -12,9 +14,9 @@ Pod::Spec.new do |s|
   s.summary     = 'Some generally-useful support bits for iOS and OSX development.'
   s.description = 'Some generally-useful support bits for iOS and OSX development.'
 
-  s.homepage = 'https://github.com/sagran/Clutter'
-  s.author   = {'Sergey Grankin' => 'sagran@gmail.com' }
-  s.source   = {git:'https://github.com/sagran/Clutter.git', tag:POD_VERSION}
+  s.homepage = 'https://github.com/sgrankin/Clutter'
+  s.author   = {'Sergey Grankin' => 'sgrankin@gmail.com' }
+  s.source   = {git:'https://github.com/sgrankin/Clutter.git', tag:POD_VERSION}
 
   s.version  = POD_VERSION[1..-1]
   s.license  = {type:'MIT', file:'LICENSE'}
@@ -29,35 +31,37 @@ Pod::Spec.new do |s|
     'OTHER_CPLUSPLUSFLAGS' => '-std=gnu++11 -stdlib=libc++',
   }
 
-  s.source_files = ::G.sources 'Clutter'
+  s.source_files, s.exclude_files = ::G.sources 'Clutter'
   s.prefix_header_contents = '#import "Clutter.h"'
   # s.preserve_paths = 'Specs'
 
   s.subspec 'CoreExt' do |ss|
     frameworks = %w{CoreData CoreGraphics}
-    source_files = ::G.sources 'Clutter/CoreExt/**'
+    source_files, exclude_files = ::G.sources 'Clutter/CoreExt'
 
     ss.ios.frameworks = frameworks + %w{CoreImage UIKit}
     ss.ios.source_files = source_files.dup
+    ss.ios.exclude_files = exclude_files.dup
 
     ss.osx.frameworks = frameworks + %w{QuartzCore}
-    ss.osx.source_files = source_files.dup.exclude(/UIKit/)
+    ss.osx.source_files = source_files.dup #.exclude(/UIKit/) # TODO
+    ss.osx.exclude_files = exclude_files.dup
 
     ss.dependency 'MAObjCRuntime'
   end
 
   s.subspec 'Error' do |ss|
-    ss.source_files = ::G.sources 'Clutter/Error/**'
+    ss.source_files = ::G.sources 'Clutter/Error'
     ss.dependency 'Clutter/CoreExt'
   end
 
   s.subspec 'StateMachine' do |ss|
-    ss.source_files = ::G.sources 'Clutter/StateMachine/**'
+    ss.source_files = ::G.sources 'Clutter/StateMachine'
     ss.dependency 'Clutter/CoreExt'
   end
 
   s.subspec 'UserDefaults' do |ss|
-    ss.source_files = ::G.sources 'Clutter/UserDefaults/**'
+    ss.source_files = ::G.sources 'Clutter/UserDefaults'
     ss.dependency 'Clutter/CoreExt'
   end
 
