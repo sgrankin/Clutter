@@ -1,10 +1,11 @@
 POD_VERSION='v0.0.1'
 
 module ::G
-  def self.sources path
+  def self.sources(path, wild=true)
     exts = ".{h,hpp,c,cpp,cxx,m,mm}"
-    includes = "#{path}/**/*#{exts}"
-    excludes = "#{path}/**/*_Tests#{exts}"
+    wild = wild ? '/**' : ''
+    includes = "#{path}#{wild}/*#{exts}"
+    excludes = "#{path}#{wild}/*_Tests#{exts}"
     return includes, excludes
   end
 end
@@ -31,7 +32,7 @@ Pod::Spec.new do |s|
     'OTHER_CPLUSPLUSFLAGS' => '-std=gnu++11 -stdlib=libc++',
   }
 
-  s.source_files, s.exclude_files = ::G.sources 'Clutter'
+  s.source_files, s.exclude_files = ::G.sources('Clutter', false)
   s.prefix_header_contents = '#import "Clutter.h"'
   # s.preserve_paths = 'Specs'
 
