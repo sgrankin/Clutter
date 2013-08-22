@@ -51,17 +51,17 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Error' do |ss|
-    ss.source_files = ::G.sources 'Clutter/Error'
+    ss.source_files, ss.exclude_files = ::G.sources 'Clutter/Error'
     ss.dependency 'Clutter/CoreExt'
   end
 
   s.subspec 'StateMachine' do |ss|
-    ss.source_files = ::G.sources 'Clutter/StateMachine'
+    ss.source_files, ss.exclude_files = ::G.sources 'Clutter/StateMachine'
     ss.dependency 'Clutter/CoreExt'
   end
 
   s.subspec 'UserDefaults' do |ss|
-    ss.source_files = ::G.sources 'Clutter/UserDefaults'
+    ss.source_files, ss.exclude_files = ::G.sources 'Clutter/UserDefaults'
     ss.dependency 'Clutter/CoreExt'
   end
 
